@@ -1,15 +1,12 @@
 
-import Signup from "./screens/Signup";
+import Home from "./screens/Home";
 import React from 'react';
 import './App.css';
-
-
-
 
 function App() {
   return (
    
-	<Signup/>
+	<Home/>
       
   );
 }

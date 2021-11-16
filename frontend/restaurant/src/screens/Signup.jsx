@@ -10,7 +10,7 @@ function Signup() {
         <input type="password" id="password" name="password" placeholder="*New Password"></input> <br/> <br/>
         <input type="password" id="password" name="password" placeholder="*Confirm New Password"></input> <br/> <br/>
         
-             <button>Create My Account</button>
+        <button>Create My Account</button>
        </form> 
        </div>
     )

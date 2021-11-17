@@ -3,7 +3,7 @@ import React from 'react'
 function Signup() {
     return (
         <div>
-        <form>
+        <div className="signup-form">
         <h1>Create an an Account</h1>
         <input type="text" id="full-name" name="name" placeholder="*Full Name"></input> <br/> <br/>
         <input type="email" id="email" name="email" placeholder="*Email"></input> <br/> <br/>
@@ -11,9 +11,9 @@ function Signup() {
         <input type="password" id="password" name="password" placeholder="*Confirm New Password"></input> <br/> <br/>
         
         <button>Create My Account</button>
-       </form> 
+       </div> 
        </div>
     )
 }
 
-export default Signup
+export default Signup;

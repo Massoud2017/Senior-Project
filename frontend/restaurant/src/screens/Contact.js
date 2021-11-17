@@ -1,11 +1,11 @@
 import React from 'react'
 
-function Order() {
+function Contact() {
     return (
         <div>
-            
+            <h1>Contact</h1>
         </div>
     )
 }
 
-export default Order
+export default Contact;

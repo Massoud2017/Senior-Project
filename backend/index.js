@@ -1,7 +1,7 @@
 const express =  require('express')
-
+const bodyParser = require('body-parser')
 const app = express()
-
+const cors = require('cors')
 const mysql = require('mysql')
 
 var db = mysql.createConnection({
@@ -30,18 +30,22 @@ db.connect((err) =>{
     
 })
 */
-// Insert into table that we have created 
-db.query("INSERT INTO account(userID,password) VALUES('Massoud','kdajdkf')", (err, rows) => {
-    if(err) {
-        throw err
-    } else {
-        console.log("Data SENT BOIS"); 
-        console.log(rows)
 
-    } 
-})      
+app.use(cors()); 
+app.use(express.json())
+app.use(bodyParser.urlencoded({extended: true}));
+// Insert into table that we have created 
+app.post("/api/insert", (req, res) => {
+    const userID = req.body.userID
+    const password = req.body.password
+    const sqlInsert = "INSERT INTO account(userID ,password) VALUES('??','??')";
+    db.query(sqlInsert, [userID,password], (err, rows) => { 
+        console.log(err); 
+    }); 
+})
+    
 
 app.listen(3001, () => {
-    console.log("runnign on port 3001");
+    console.log("running on port 3001");
 });
 

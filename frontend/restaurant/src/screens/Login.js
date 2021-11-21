@@ -1,6 +1,6 @@
 import React , {useState, useEffect} from 'react';
 import Axios from 'axios'
-
+import style from './style.css'
 
 function Login() {
   const [userID, setUserID] = useState('');
@@ -13,17 +13,18 @@ function Login() {
   }; 
     return (
       <div>
-         <form className="form">
-           <label for ="email"> Email </label>  
-                <input type="userID" id="userID" name="userID" onChange={(e)=> {
+         <form className="form-login">
+          
+           <label for ="id"> Username </label>  
+                <input class="userId" type="userid" id="Username" name="Username" placeholder="Username"  onChange={(e)=> {
                   setUserID(e.target.value)
                 }}/><br/> <br/>
             
-            <label for ="password"> Password </label>  
-            <input type="password" id="password" name="password" onChange={(e)=> {
+            <label for ="password" > Password </label>  
+            <input type="password" id="password" name="password" placeholder="Password" onChange={(e)=> {
                   setPassword(e.target.value)
                 }}/><br/> <br/>
-                <button onClick={SignIn}>Sign In</button>
+                <button class="btn-login" onClick={SignIn}>Sign In</button>
           </form> 
       </div>
     )

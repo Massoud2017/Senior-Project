@@ -2,21 +2,39 @@ import React from 'react'
 import {Link} from 'react-router-dom';
 function Nav() {
     return (
+        
+        
+
         <nav>
-            <h3>Logo</h3>
-            <ul className="nav-links">
+        <Link to='/' > 
+        <li>
+        <button class="logo">Logo</button> 
+        </li>
+        </Link>
+  
+            <ul className="nav-links">            
+            
                 <Link to='/menu' > 
-                <li>Menu</li>
+                <li>
+                <button class="menu-1">Menu</button> 
+                </li>
                 </Link>
-                <Link to="/order">
-                <li>Order</li>
+                <Link to="/order"> 
+                <li>
+                <button className="order">Order</button> 
+                </li>
                 </Link>
                 <Link to="/contact">
-                <li>Contact</li>
+                <li>
+                <button className="contact">Contact</button>  
+                </li>
                 </Link>
                 <Link to="/login">
-                <li>Login</li>
+                <li>
+                <button class="login">Login</button>  
+                </li>
                 </Link>
+
             </ul>
         </nav>
     )

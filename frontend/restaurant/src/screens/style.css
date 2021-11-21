@@ -1,0 +1,46 @@
+.form-login {
+    position: fixed;
+    padding-top: 20%;
+    padding-bottom: 20%;
+    padding-left: 40%;
+}
+
+.btn-login {
+    margin-left:50%;
+}
+.menu-1,.order,.contact,.login{
+    display: inline-block;
+    padding: 15px 25px;
+    font-size: 18px;
+    cursor: pointer;
+    text-align: center;
+    text-decoration: none;
+    outline: none;
+    color: #fff;
+    background-color: #080807;
+    border: none;
+    border-radius: 15px;
+    
+   
+  }
+  
+.order:hover {
+    background-color: #b4710c;
+}
+.menu-1:hover {
+    background-color: #b4710c;
+}
+.contact:hover {
+    background-color: #b4710c;
+}
+.login:hover {
+    background-color: #b4710c;
+}
+.logo{
+    border-radius: 50%;
+    font-size: 50px;
+}
+
+
+
+

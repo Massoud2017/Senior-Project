@@ -1,9 +1,11 @@
 import React from 'react'
+import Background from './food-image.png';
 
 function Home() {
+ 
     return (
         <div className="home">
-            <h1>Welcome to Pho Ru Restaurent</h1>
+            <h1>Welcome to Pho Ru Restaurent</h1> 
         </div>
     )
 }

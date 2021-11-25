@@ -1,5 +1,5 @@
 import React from 'react'
-import Background from './food-image.png';
+
 
 function Home() {
  

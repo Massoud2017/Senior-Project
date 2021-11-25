@@ -4,11 +4,11 @@ function Nav() {
     return (
         
         
-
+        <div>
         <nav>
         <Link to='/' > 
         <li>
-        <button class="logo">Logo</button> 
+        <button className="logo">Logo</button> 
         </li>
         </Link>
   
@@ -16,7 +16,7 @@ function Nav() {
             
                 <Link to='/menu' > 
                 <li>
-                <button class="menu-1">Menu</button> 
+                <button className="menu-1">Menu</button> 
                 </li>
                 </Link>
                 <Link to="/order"> 
@@ -31,12 +31,13 @@ function Nav() {
                 </Link>
                 <Link to="/login">
                 <li>
-                <button class="login">Login</button>  
+                <button className="login">Login</button>  
                 </li>
                 </Link>
 
             </ul>
         </nav>
+        </div>
     )
 }
 

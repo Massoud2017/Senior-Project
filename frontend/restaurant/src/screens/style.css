@@ -5,10 +5,8 @@
     padding-left: 40%;
 }
 
-.btn-login {
-    margin-left:50%;
-}
-.menu-1,.order,.contact,.login{
+
+.menu-1,.order,.contact,.about-btn{
     display: inline-block;
     padding: 15px 25px;
     font-size: 18px;
@@ -23,6 +21,9 @@
     
    
   }
+  .login{
+    margin-left: 11.3in;
+  }
   
 .order:hover {
     background-color: #b4710c;
@@ -31,11 +32,13 @@
     background-color: #b4710c;
 }
 .contact:hover {
-    background-color: #b4710c;
+    background-color: #f3960b;
 }
-.login:hover {
-    background-color: #b4710c;
+
+.about-btn:hover {
+    background-color: #f3960b;
 }
+
 .logo{
     border-radius: 50%;
     font-size: 50px;
@@ -55,7 +58,14 @@
     float: right;
 }
 
-  
+li{
+    list-style-type: none;
+}
+
+.login-btn {
+    margin-bottom: 140%;
+    
+}
 
 
 

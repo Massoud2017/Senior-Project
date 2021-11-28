@@ -5,7 +5,10 @@ function Nav() {
         
         
         <div className="nav">
-        <nav>
+            
+              
+            
+         <nav>
         <Link to='/' > 
         <li>
         <button className="logo">Logo</button> 
@@ -29,14 +32,26 @@ function Nav() {
                 <button className="contact">Contact</button>  
                 </li>
                 </Link>
-                <Link to="/login">
+
+                <Link to="/about">
                 <li>
-                <button className="login">Login</button>  
+                <button className="about-btn">About</button>  
                 </li>
                 </Link>
 
+               
+              
+
             </ul>
+            <Link to="/login">
+                <li>
+                <button  className="login-btn">Sign In</button>  
+                </li>
+                </Link> 
+            
         </nav>
+       
+      
         </div>
     )
 }

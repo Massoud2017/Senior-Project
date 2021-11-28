@@ -1,5 +1,13 @@
 # Getting Started with Create React App
-To install react router: npm install react-router react-router-dom
+npm i
+npm init
+To install react router: npm install react-router react-router-dom axios cors (frontend)
+Install axios: npm i axios (frontend)
+Install cors: npm install cors (backend)
+
+Backend dependency: npm install express body-parser mysql cors nodemon
+Backend: In package Json: add in script section: "start": "node index.js"
+                                                          "devStart":"nodemon index.js 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts

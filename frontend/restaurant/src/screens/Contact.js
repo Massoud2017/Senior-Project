@@ -10,18 +10,22 @@ function Map() {
     );
 
 }
-
 const WrappedMap = withScriptjs(withGoogleMap(Map)); 
 
 function Contact() {
+    
     return (
-        
-       <div style={{width:'50vw', height:'50vh'}}>
-           <WrappedMap googleMapURL ={`https://maps.googleapis.com/maps/api/js?v=3.exp&libraries=geometry,drawing,places&key`}
+       <div>
+           <h1>For all inquiries, contact us!</h1>
+       <div className= "map" style={{width:'50vw', height:'50vh'}}>
+           
+           <WrappedMap googleMapURL ={`https://maps.googleapis.com/maps/api/js?key=AIzaSyBxQHBgUy4CxpOm2WXT29pTRcR7UctUPrE=3.exp&libraries=geometry,drawing,places&key`}
            loadingElement ={<div style={{height:'100%'}} />}
            containerElement ={<div style={{height:'100%'}} />}
            mapElement ={<div style={{height:'100%'}} />}
            />
+           
+       </div>
        </div>
     )
 }

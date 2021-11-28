@@ -4,7 +4,7 @@ function Nav() {
     return (
         
         
-        <div>
+        <div className="nav">
         <nav>
         <Link to='/' > 
         <li>

@@ -4,6 +4,7 @@ const app = express()
 const cors = require('cors')
 const mysql = require('mysql')
 
+//create connection between mysqlbench work and express 
 var db = mysql.createConnection({
     host:'localhost',
     user:'root',
@@ -13,6 +14,7 @@ var db = mysql.createConnection({
 
 });
 
+// we wanna make sure that the database is connected 
 db.connect((err) =>{
     if(err) {
         throw err
@@ -34,7 +36,7 @@ db.connect((err) =>{
 app.use(cors()); 
 app.use(express.json())
 app.use(bodyParser.urlencoded({extended: true}));
-// Insert into table that we have created 
+
 app.post("/api/insert", (req, res) => {
     const userID = req.body.userID
     const password = req.body.password

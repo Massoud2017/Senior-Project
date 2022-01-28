@@ -10,6 +10,8 @@ Backend: In package Json: add in script section: "start": "node index.js"
                                                           "devStart":"nodemon index.js 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
+
+#To install google map api: npm i @react-google-maps/api  
 ## Available Scripts
 
 In the project directory, you can run:

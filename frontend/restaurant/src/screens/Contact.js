@@ -1,34 +1,41 @@
 import React from 'react'
-import {GoogleMap, withScriptjs, withGoogleMap} from "react-google-maps";
+
+import { GoogleMap, useLoadScript } from '@react-google-maps/api';
 
 
-function Map() {
-    return ( <GoogleMap
-    defaultZoom={10}
-    defaultCenter={{lat:38.47599826526979, lng:-121.43035598757425}}
-    />
-    );
 
-}
-const WrappedMap = withScriptjs(withGoogleMap(Map)); 
+const containerStyle = {
+    width: '100vw',
+    height: '100vh',
+  };
 
-function Contact() {
-    
+  const center = {
+    lat: 35.6804,
+    lng: 139.769,
+  };
+  
+  
+
+  function Contact() {
+    const { isLoaded, loadError } = useLoadScript({
+      googleMapsApiKey: process.env.REACT_APP_GOOGLE_MAPS_API_KEY,
+    });
+  
+    if (loadError) return 'Error loading maps';
+    if (!isLoaded) return 'Loading maps';
+  
     return (
-       <div>
-           <h1>For all inquiries, contact us!</h1>
-       <div className= "map" style={{width:'50vw', height:'50vh'}}>
-           
-           <WrappedMap googleMapURL ={`https://maps.googleapis.com/maps/api/js?key=AIzaSyBxQHBgUy4CxpOm2WXT29pTRcR7UctUPrE=3.exp&libraries=geometry,drawing,places&key`}
-           loadingElement ={<div style={{height:'100%'}} />}
-           containerElement ={<div style={{height:'100%'}} />}
-           mapElement ={<div style={{height:'100%'}} />}
-           />
-           
-       </div>
-       </div>
-    )
-}
+      <div className="App">
+        <GoogleMap
+          mapContainerStyle={containerStyle}
+          center={center}
+          zoom={10}
+          
+        ></GoogleMap>
+      </div>
+    );
+  }
+  
 
 
   export default Contact;

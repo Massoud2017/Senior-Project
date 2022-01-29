@@ -2,8 +2,9 @@ import Home from "./screens/Home";
 import Login from "./screens/Login";
 import About from "./screens/About";
 import Contact from "./screens/Contact";
+import Footer from "./components/Footer";
 import Menu from "./screens/Menu";
-import Nav from "./screens/Nav";
+import Nav from "./components/Nav";
 import Order from "./screens/Order";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import React from "react";
@@ -11,9 +12,8 @@ import "./App.css";
 
 function App() {
   return (
+    <div className="app">
     <Router>
-      <div className="app">
-      
         <Nav/>
         <Routes>
           <Route path="/" exact element={<Home/>} />
@@ -23,8 +23,9 @@ function App() {
           <Route path="/about" element={<About />} />
           <Route path="/login" element={<Login/>} />
         </Routes>
+      <Footer/>
+      </Router>
       </div>
-    </Router>
   );
 }
 

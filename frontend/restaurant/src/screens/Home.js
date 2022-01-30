@@ -5,7 +5,7 @@ function Home() {
  
     return (
         <div className="home">
-            <h1>Welcome to Pho Ru Restaurent</h1> 
+            <h1>Welcome to Pho Ru Restaurant</h1> 
         </div>
     )
 }

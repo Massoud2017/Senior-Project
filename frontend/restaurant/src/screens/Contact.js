@@ -1,6 +1,5 @@
 import React from 'react'
-import InstagramIcon from "@material-ui/icons/Instagram";
-import FacebookIcon from "@material-ui/icons/Facebook";
+
 
 // import { GoogleMap, useLoadScript } from '@react-google-maps/api';
 
@@ -65,7 +64,7 @@ function Contact() {
           <li>Email: </li>
           <li>
             <div className="socialMedia">
-              <InstagramIcon /> <FacebookIcon />
+              
             </div>
           </li>
         </ul>

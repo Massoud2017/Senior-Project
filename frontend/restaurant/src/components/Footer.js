@@ -1,6 +1,4 @@
 import React from "react";
-import InstagramIcon from "@material-ui/icons/Instagram";
-import FacebookIcon from "@material-ui/icons/Facebook";
 import "./components-styles/Footer.css";
 import Logo_y from './yelp_logo.png';
 import Logo_f from './f_logo.png';

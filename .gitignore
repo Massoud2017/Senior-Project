@@ -234,3 +234,4 @@ frontend/restaurant/node_modules/.cache/default-development/13.pack
 frontend/restaurant/node_modules/.cache/default-development/index.pack
 frontend/restaurant/node_modules/.cache/default-development/index.pack.old
 .gitignore
+node_modules

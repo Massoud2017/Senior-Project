@@ -1,6 +1,9 @@
 import React from "react";
+import '../screens/Menu.css'
+
 
 function MenuItem({image,name, price}) {
+  
   return (
     <div className="menuItem">
         <img src={image}/>

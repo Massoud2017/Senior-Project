@@ -1,9 +1,10 @@
 import React from 'react'
+import InstagramIcon from "@material-ui/icons/Instagram";
+import FacebookIcon from "@material-ui/icons/Facebook";
+
 
 
 // import { GoogleMap, useLoadScript } from '@react-google-maps/api';
-
-
 
 // const containerStyle = {
 //     width: '100vw',
@@ -15,8 +16,6 @@ import React from 'react'
 //     lng: 139.769,
 //   };
   
-  
-
 //   function Contact() {
 //     const { isLoaded, loadError } = useLoadScript({
 //       googleMapsApiKey: process.env.REACT_APP_GOOGLE_MAPS_API_KEY,
@@ -64,7 +63,7 @@ function Contact() {
           <li>Email: </li>
           <li>
             <div className="socialMedia">
-              
+              <InstagramIcon /> <FacebookIcon />
             </div>
           </li>
         </ul>

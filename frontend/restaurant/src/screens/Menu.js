@@ -1,30 +1,37 @@
-import  {useState} from "react";
-import { MenuList } from "./MenuList.js";
-import MenuItem from "../components/MenuItem.js";
-import './Menu.css'
-import './Filter.js'
+import { useState } from 'react';
+import items from './MenuList.js';
+import MenuItems from './MenuItems';
+import Button from './Button';
+import "./Menu.css";
 
+const allCategories = ['All', ...new Set(items.map(item => item.type))];
 
+console.log(allCategories);
 
 function Menu() {
+  const [menuItem, setMenuItem] = useState(items);
+  const [buttons, setButtons] = useState(allCategories);
 
-    return (
-      <div className="menu">
-        <h1 className="menuTitle">Our Menu</h1>
-        <div className="menuList">
-        
-          {MenuList.map((menuItem, key) => {
-              return <MenuItem 
-              key={key} 
-              image={menuItem.image}
-              name={menuItem.name} price={menuItem.price} />
-              
-          })}
-              
-        </div>
-        
-      </div>
-    );
+  //Filter Function
+  const filter = (button) =>{
+
+    if(button === 'All'){
+      setMenuItem(items);
+      return;
+    }
+
+    const filteredData = items.filter(item => item.type ===  button);
+    setMenuItem(filteredData)
   }
+
+
+  return (
+    <div className="menu">
+      <Button button={buttons} filter={filter} />
+       <MenuItems menuItem={menuItem}/>
+
+    </div>
+  );
+}
 
 export default Menu;

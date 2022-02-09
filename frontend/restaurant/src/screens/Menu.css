@@ -1,25 +1,14 @@
-.menu {
-  width: 100%;
-  height: auto;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-}
-.menu .menuTitle {
-  font-family: cursive;
-  font-size: 60px;
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-.menuList {
-  width: 70vw;
-  height: auto;
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
-  place-items: center;
+body{
+  font-family: 'Varela Round', sans-serif;
+  color: rgb(12, 1, 1);
+  font-size: 1.2rem;
 }
-
-/* MENU ITEM STYLING */
 
 .menuItem {
   border-radius: 15px;
@@ -35,8 +24,8 @@
 }
 
 .menuItem div {
-  border-top-left-radius: 30px;
-  border-top-right-radius: 30px;
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
   width: 100%;
   height: 200px;
   background-position: center;
@@ -46,19 +35,91 @@
 
 .menuItem h1,
 .menuItem p {
-  margin-left: 3px;
-  font-size: 20px;
-}
-img {width: 80%}
-
-@media only screen and (max-width: 1300px) {
-  .menuList {
-    grid-template-columns: 1fr 1fr;
-  }
+  margin-left: 20px;
 }
 
-@media only screen and (max-width: 800px) {
-  .menuList {
-    grid-template-columns: 1fr;
-  }
+
+.menu{
+  padding: 0 20rem;
+  width: 90%;
+  height: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+h1{
+  font-size: 1rem;
+}
+
+
+
+h2{
+  font-size: 1rem;
+  font-weight: 200;
+  margin: 1rem 0;
+}
+
+h2:hover{
+  cursor: pointer;
+  transition: all .3s ease-in-out;
+  color: #037FFF;
+}
+
+p{
+  color: rgba(22, 18, 18, 0.596);
+}
+
+.item{
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 3rem;
+  padding-bottom: 6rem;
+}
+
+.item-container{
+  overflow: hidden;
+}
+
+.item-con{
+  width: 100%;
+  padding: 1.2rem 1.2rem;
+}
+
+.item-container > img{
+  width: 100%;
+  transition: all .3s ease-in-out;
+}
+
+
+
+
+.buttons{
+  width: 70%;
+  margin: 3rem auto;
+  text-align: center;
+}
+
+.btn{
+  padding: .8rem 4rem;
+  background-color: #0C3564;
+  border: none;
+  font-family: inherit;
+  font-size: inherit;
+  color: white;
+  transition: all 0.4s cubic-bezier(1,-0.16,.6,1.35);
+}
+
+.btn:not(:last-child){
+  margin-right: 1rem;
+}
+
+.btn:hover{
+  background-color: #037FFf;
+  cursor: pointer;
+}
+
+.btn:active, .btn:focus{
+  outline: none;
+  border: none;
 }

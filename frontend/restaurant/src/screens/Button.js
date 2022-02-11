@@ -1,9 +1,13 @@
 import React from 'react'
-import './Button.css'
-function Button({filter}) {
+
+function Button({button, filter}) {
     return (
-        <div>
-                <button type="button" onClick={()=>filter('Appetizers and Salads')}>Salads</button>
+        <div className="buttons">
+            {
+                button.map((cat, i)=>{
+                    return <button type="button" onClick={()=> filter(cat)} >{cat}</button>
+                })
+            }
         </div>
     )
 }

@@ -2,7 +2,7 @@ import SpecialGreenFriedRice from '../assets/f_logo.png';
 import GarlicChilliPrawn from '../assets/r1.png';
 import GrilledPorkChops from '../assets/r2.PNG';
 
-export const MenuList = [
+export default [
     {   
         type: 'Appetizers and Salads',
         name: 'Ru`s Special Trio',

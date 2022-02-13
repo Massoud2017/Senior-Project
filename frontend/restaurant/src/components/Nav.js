@@ -1,6 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import "./components-styles/style.css";
+
 function Nav() {
   return (
     <div className="nav">
@@ -34,6 +35,16 @@ function Nav() {
             </li>
           </Link>
         </ul>
+
+        {/* -- Click on Cart Icon bring user to Menu Page */}
+        <Link to="/menu">
+          <li>
+            <button className="cart-btn">
+              <img src={require('../assets/cart-icons8-64.png')} alt="Symbol Icon Cart" width={40} height={40} />
+            </button>
+          </li>
+        </Link>
+
         <Link to="/login">
           <li>
             <button className="login-btn">Sign In</button>

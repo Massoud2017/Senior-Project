@@ -9,6 +9,7 @@ import Order from "./screens/Order";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import React from "react";
 import "./App.css";
+import "./components/components-styles/style.css"
 
 function App() {
   return (
@@ -23,9 +24,9 @@ function App() {
           <Route path="/about" element={<About />} />
           <Route path="/login" element={<Login/>} />
         </Routes>
-      <Footer/>
-      </Router>
-      </div>
+        <Footer/>
+    </Router>
+    </div>
   );
 }
 

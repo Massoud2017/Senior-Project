@@ -1,3 +1,36 @@
+/* --------------------  */
+/* -- General styles    */
+/* ------------------- */
+
+.row {
+    display: flex;
+    justify-content: space-between;
+}
+
+.row.center {
+    align-items: center;
+}
+
+.col-1 {
+    flex: 1;
+}
+  
+.col-2 {
+    flex: 2;
+}
+
+.block {
+    background-color: #e0e0e0;
+    padding: 1rem;
+    margin: 0.5rem;
+    border-radius: 0.5rem;
+  }
+
+
+/* -------------------------- */
+/* -- Specific components    */
+/* ------------------------ */
+
 .form-login {
     position: fixed;
     padding-top: 20%;
@@ -21,6 +54,7 @@
     
    
   }
+
   .login{
     margin-left: 11.3in;
   }
@@ -51,7 +85,7 @@
     float: right;
 }
 
- .about {
+.about {
     width: 600px;
     height: 600px;
     margin-top: 15ch;
@@ -62,13 +96,63 @@ li{
     list-style-type: none;
 }
 
+
+/* --------------- */
+/* -- For Cart    */
+/* ------------- */
+
+.cart-btn {
+    margin: 0.5rem;
+    cursor: pointer;
+}
+
+.add-cart-btn {
+    font-size: 0.8rem;
+    padding: 0.2rem;
+    margin: 0.1rem;
+    border-radius: 0.5rem;
+    border: 0.1rem #404040 solid;
+    background-color: #f0c040;
+    width: 100%;
+    cursor: pointer;
+}
+
+.add-cart-btn.add {
+    background-color: #40c0f0;
+    width: 1.5rem;
+  }
+  
+.add-cart-btn.remove {
+    background-color: #f04040;
+    width: 1.5rem;
+}
+
+.add-cart-btn.badge {
+    background-color: #f04040;
+    border: none;
+    color: #ffffff;
+    width: 1.5rem;
+}
+
+.text-right {
+    text-align: right;
+}
+
+
+
+/* ---------------- */
+/* -- For Login    */
+/* -------------- */
+
 .login-btn {
     margin-bottom: 140%;
-    
 }
+
 .btn-login {
     margin-left: 1in;
 }
+
+
 
 
 

@@ -1,4 +1,4 @@
-import SpecialGreenFriedRice from '../assets/f_logo.png';
+import SpecialGreenFriedRice from '../assets/k1.PNG';
 import GarlicChilliPrawn from '../assets/r1.PNG';
 import GrilledPorkChops from '../assets/r2.PNG';
 

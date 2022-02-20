@@ -1,7 +1,8 @@
 import React from 'react'
-import InstagramIcon from "@material-ui/icons/Instagram";
-import FacebookIcon from "@material-ui/icons/Facebook";
-
+//import InstagramIcon from "@material-ui/icons/Instagram";
+//import FacebookIcon from "@material-ui/icons/Facebook";
+import FacebookIcon from '../assets/f_logo.png';
+import InstagramIcon from '../assets/Insta_logo.png';
 
 
 // import { GoogleMap, useLoadScript } from '@react-google-maps/api';
@@ -15,22 +16,22 @@ import FacebookIcon from "@material-ui/icons/Facebook";
 //     lat: 35.6804,
 //     lng: 139.769,
 //   };
-  
+
 //   function Contact() {
 //     const { isLoaded, loadError } = useLoadScript({
 //       googleMapsApiKey: process.env.REACT_APP_GOOGLE_MAPS_API_KEY,
 //     });
-  
+
 //     if (loadError) return 'Error loading maps';
 //     if (!isLoaded) return 'Loading maps';
-  
+
 //     return (
 //       <div className="App">
 //         <GoogleMap
 //           mapContainerStyle={containerStyle}
 //           center={center}
 //           zoom={10}
-          
+
 //         ></GoogleMap>
 //       </div>
 //     );
@@ -63,7 +64,8 @@ function Contact() {
           <li>Email: </li>
           <li>
             <div className="socialMedia">
-              <InstagramIcon /> <FacebookIcon />
+              <a target="_blank" rel="noreferrer" href="https://www.instagram.com/phoru.usa/?hl=en"> <img src={InstagramIcon} alt="insta-log" height={35} width={35} /></a> {"                           "}
+              <a target="_blank" rel="noreferrer" href="https://www.facebook.com/phorurestaurant/"><img src={FacebookIcon} alt="facebook-log" height={35} width={35} /></a> {"                           "}
             </div>
           </li>
         </ul>
@@ -72,9 +74,9 @@ function Contact() {
         <div class="gmap_canvas">
           <iframe title="google map" width="600" height="500" id="gmap_canvas" src="https://maps.google.com/maps?q=6115%20Mack%20Rd.%20Sacramento,%20CA%2095823&t=&z=13&ie=UTF8&iwloc=&output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe>
           <a href="https://wimip.net/nordvpn-coupon"></a><br />
-          <style dangerouslySetInnerHTML={{__html: ".mapouter{position:relative;text-align:right;height:500px;width:600px;}" }} />
+          <style dangerouslySetInnerHTML={{ __html: ".mapouter{position:relative;text-align:right;height:500px;width:600px;}" }} />
           <a href="https://www.embedgooglemap.net">responsive google maps</a>
-          <style dangerouslySetInnerHTML={{__html: ".gmap_canvas {overflow:hidden;background:none!important;height:500px;width:600px;}" }} />
+          <style dangerouslySetInnerHTML={{ __html: ".gmap_canvas {overflow:hidden;background:none!important;height:500px;width:600px;}" }} />
         </div>
       </div>
     </div>
@@ -82,4 +84,4 @@ function Contact() {
 }
 
 
-  export default Contact;
+export default Contact;

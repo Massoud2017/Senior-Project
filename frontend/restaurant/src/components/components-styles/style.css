@@ -58,6 +58,10 @@
   .login{
     margin-left: 11.3in;
   }
+
+.logo:hover {
+    background-color: #b4710c;
+}
   
 .order:hover {
     background-color: #b4710c;
@@ -74,8 +78,8 @@
 }
 
 .logo{
-    border-radius: 50%;
-    font-size: 50px;
+    border: none;
+    background-color: rgb(197, 165, 95);
 }
 
 .map  {

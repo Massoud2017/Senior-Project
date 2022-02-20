@@ -9,7 +9,7 @@ function Nav() {
         <Link to="/">
           <li>
             <button className="logo">
-            <img src={require('../assets/PhoRuLogo.png')} alt="logo" width={100} height={70} />
+              <img src={require('../assets/PhoRuLogo.png')} alt="logo" width={100} height={70} />
             </button>
           </li>
         </Link>
@@ -27,7 +27,7 @@ function Nav() {
           </Link>
           <Link to="/contact">
             <li>
-              <button className="contact">Contact</button>
+              <button className="contact-btn">Contact</button>
             </li>
           </Link>
 

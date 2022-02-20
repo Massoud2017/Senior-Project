@@ -44,7 +44,7 @@ import InstagramIcon from '../assets/Insta_logo.png';
 
 function Contact() {
   return (
-    <div className="contact-btn">
+    <div className="contact">
       <div>
         <h2>Business Hours:</h2>
         <ul>

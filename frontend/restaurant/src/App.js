@@ -10,6 +10,7 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import React from "react";
 import "./App.css";
 import "./components/components-styles/style.css"
+import Register from "./screens/Register";
 
 function App() {
   return (
@@ -23,6 +24,7 @@ function App() {
           <Route path="/contact" element={<Contact/>} />
           <Route path="/about" element={<About />} />
           <Route path="/login" element={<Login/>} />
+          <Route path="/signup" element={<Register/>} />
         </Routes>
         <Footer/>
     </Router>

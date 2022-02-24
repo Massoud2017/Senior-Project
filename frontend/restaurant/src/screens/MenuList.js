@@ -1,6 +1,6 @@
-import SpecialGreenFriedRice from '../assets/k1.png';
-import GarlicChilliPrawn from '../assets/r1.png';
-import GrilledPorkChops from '../assets/r2.png';
+import SpecialGreenFriedRice from '../assets/k1.PNG';
+import GarlicChilliPrawn from '../assets/r1.PNG';
+import GrilledPorkChops from '../assets/r2.PNG';
 
 // export default [
 const MenuList = [

@@ -52,6 +52,12 @@ function Nav() {
             <button className="login-btn">Sign In</button>
           </li>
         </Link>
+
+        <Link to="/signup">
+          <li>
+            <button className="login-btn-signup">Register</button>
+          </li>
+        </Link>
       </nav>
     </div>
   );

@@ -26,6 +26,8 @@
 .col-3 {
     flex: 1;
     background-color: #e0e0e0;
+    flex-direction: column;
+    display: flex;
 }
 
 
@@ -34,7 +36,7 @@
     padding: 1rem;
     margin: 0.5rem;
     border-radius: 0.5rem;
-  }
+}
 
 
 /* -------------------------- */

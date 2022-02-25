@@ -95,7 +95,7 @@ menubuttons{
   display: inline-flex;
   flex-direction: column;
   box-sizing: border-box;
-  font-size: 25px;
+  font-size: 1.75rem;
   width: 90%;
   text-align: center;
   margin: 1.25rem 1.25rem;

@@ -58,10 +58,13 @@ function Menu() {
 
   return (
     <div className="row">
-      <div className="menu col-2">
+      <div className="col-3">
         <Button button={buttons} filter={filter} />
-        <MenuItems menuItem={menuItem} onAddToCart={onAddToCart}/>
       </div>
+      <div className="menu col-2">
+        <MenuItems menuItem={menuItem} onAddToCart={onAddToCart} />
+      </div>
+
 
       <Basket cartItems={cartItems} onAddToCart={onAddToCart} onRemoveFromCart={onRemoveFromCart} />
     </div>

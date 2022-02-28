@@ -7,7 +7,7 @@ import "./Menu.css";
 
 const allCategories = ['All', ...new Set(items.map(item => item.type))];
 
-console.log(allCategories);
+// console.log(allCategories);
 
 function Menu() {
   const [menuItem, setMenuItem] = useState(items);

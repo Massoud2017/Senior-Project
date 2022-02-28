@@ -5,7 +5,7 @@ document.addEventListener("DOMContentLoaded", function (event) {
   const nextImageDelay = 8000;
   let currentImageCounter = 0;
 
-  images[currentImageCounter].style.opacity = 1;
+  // images[currentImageCounter].style.opacity = 1;
   setInterval(nextImage, nextImageDelay);
 
   function nextImage() {

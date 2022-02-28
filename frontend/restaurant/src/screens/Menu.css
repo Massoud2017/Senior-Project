@@ -40,13 +40,12 @@ body{
 
 
 .menu{
-  padding: 0 20rem;
+  padding: 0 5rem;
   width: 90%;
   height: auto;
   display: flex;
   justify-content: center;
-  align-items: center;
-  flex-direction: column;
+  flex-direction: row;
 }
 h1{
   font-size: 1rem;
@@ -73,7 +72,7 @@ p{
 
 .item{
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: repeat(3, 1fr);
   grid-gap: 3rem;
   padding-bottom: 6rem;
 }
@@ -92,7 +91,20 @@ p{
   transition: all .3s ease-in-out;
 }
 
+menubuttons{
+  display: inline-flex;
+  flex-direction: column;
+  box-sizing: border-box;
+  font-size: 1.75rem;
+  width: 90%;
+  text-align: center;
+  margin: 1.25rem 1.25rem;
+}
 
+menubuttons:hover {
+  cursor: pointer;
+  color: #037FFF;
+}
 
 
 buttons{
@@ -100,6 +112,7 @@ buttons{
   margin: 3rem auto;
   text-align: center;
 }
+
 
 .btn{
   padding: .8rem 4rem;

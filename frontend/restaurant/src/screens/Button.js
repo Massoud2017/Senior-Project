@@ -2,13 +2,16 @@ import React from 'react'
 
 function Button({button, filter}) {
     return (
-        <div className="buttons">
-            {
-                button.map((cat, i)=>{
-                    return <button type="button" onClick={()=> filter(cat)} >{cat}</button>
-                })
-            }
-        </div>
+        <aside className="block col-3">
+            <div className="buttons">
+                {
+                    button.map((cat, i)=>{
+                        return <menubuttons type="button" onClick={()=> filter(cat)} >{cat}</menubuttons>
+                    })
+                }
+            </div>
+        </aside>
+
     )
 }
 

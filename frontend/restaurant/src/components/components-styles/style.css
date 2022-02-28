@@ -1,6 +1,9 @@
 /* -- Google's font: Montserrat */
 @import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
 
+/* -- Google's font: Capriola */
+@import url('https://fonts.googleapis.com/css2?family=Capriola&family=Lexend:wght@300&display=swap');
+
 
 /* --------------------  */
 /* -- General styles    */
@@ -51,21 +54,17 @@
 }
 
 
-.menu-1,.order,.contact-btn,.about-btn{
+.menu-1,.contact-btn,.about-btn{
+    font-family: 'Lexend', sans-serif;
     display: inline-flex;
     align-items: center;
-    padding: 15px 25px;
-    font-size: 18px;
+    font-size: 1.3rem;
     cursor: pointer;
     text-decoration: none;
-    outline: none;
-    color: #fff;
-    background-color: #080807;
+    color: rgb(211, 82, 8);
+    background-color: #f4efe6;
+    justify-content: center;
     border: none;
-    border-radius: 15px;
-    justify-content: center; 
-    height: 3rem;
-    width: 8rem;
   }
 
   .contact{
@@ -94,32 +93,46 @@
     margin-left: 11.3in;
   }
 
-.logo:hover {
-    background-color: #b4710c;
-}
-  
-.order:hover {
-    background-color: #b4710c;
-}
-.menu-1:hover {
-    background-color: #b4710c;
-}
-.contact:hover {
-    background-color: #b4710c;
-}
-
-.about-btn:hover {
-    background-color: #b4710c;
-}
-
 .logo{
+    padding: 1rem 0.5rem 1rem;
     display: flex;
     flex-direction: column;
     justify-content: center;
     border: none;
-    background-color: rgb(197, 165, 95);
+    background-color: #f4efe6;
     width: auto;
     height: auto;
+}
+
+.order:hover {
+    cursor: pointer;
+    color: black;
+}
+.menu-1:hover {
+    cursor: pointer;
+    color: black;
+}
+.contact-btn:hover {
+    cursor: pointer;
+    color: black;
+}
+
+.about-btn:hover {
+    cursor: pointer;
+    color: black;
+}
+
+.PhoRu {
+  font-family: 'Capriola', sans-serif;
+  white-space: nowrap;
+  display: inline-flex;
+  align-items: center;
+  cursor: pointer;
+  text-decoration: none;
+  background-color: #f4efe6;
+  justify-content: center;
+  border: none;
+  font-size: 3.1rem;
 }
 
 .map  {
@@ -149,6 +162,13 @@ li{
 .cart-btn {
     margin: 0.5rem;
     cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    padding-left: 0.55rem;
+    font-size: 1.3rem;
+    background-color: #f4efe6;
+    justify-content: center;
+    border: none;
 }
 
 .add-cart-btn {
@@ -296,9 +316,44 @@ input[type='submit']:hover {
 }
 
 .login-btn {
-    margin-bottom: 140%;
+    font-family: 'Lexend', sans-serif;
+    color: rgb(211, 82, 8);
+    margin: 0.75rem;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    font-size: 1.2rem;
+    background-color: #f4efe6;
+    justify-content: center;
+    white-space: nowrap;
+    border: none;
 }
 
+.login-btn:hover{
+    cursor: pointer;
+    color: black;
+}
+
+.login-btn-signup {
+    font-family: 'Lexend', sans-serif;
+    color: rgb(211, 82, 8);
+    margin: 0.25rem;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    padding-left: 0.15rem;
+    padding-right: 2rem;
+    font-size: 1.2rem;
+    background-color: #f4efe6;
+    justify-content: center;
+    white-space: nowrap;
+    border: none;
+}
+
+.login-btn-signup:hover {
+    cursor: pointer;
+    color: black;
+}
 .btn-login {
     margin-left: 1in;
 }

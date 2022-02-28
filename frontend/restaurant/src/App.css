@@ -1,3 +1,6 @@
+/* -- Google's font: Stick No Bills - Semi Bold 600 */
+@import url('https://fonts.googleapis.com/css2?family=Klee+One&family=Stick+No+Bills:wght@600&display=swap');
+
 .app {
     display: flex;
     flex-direction: column;
@@ -8,11 +11,13 @@ nav{
     flex-grow: 1;
     justify-content: space-around;
     min-height: 10vh;
-    background: rgb(197, 165, 95);
+    background-color: #f4efe6;
     width: 100%;
     height: 110px;
     align-items: center;
     flex-direction: row;
+    font-family: 'Stick No Bills';
+    font-size: 5.5rem;
 }
 
 .nav-links {
@@ -21,4 +26,5 @@ nav{
     align-items: center;
     width: 50%;
     list-style: none;
+    padding: 2rem 7rem 2rem;
 }

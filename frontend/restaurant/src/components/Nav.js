@@ -9,33 +9,37 @@ function Nav() {
         <Link to="/">
           <li>
             <button className="logo">
-              <img src={require('../assets/PhoRuLogo.png')} alt="logo" width={100} height={70} />
+              <img src={require('../assets/PhoRuLogo.png')} alt="Pho Ru" width={70} height={70} />
+            </button>
+          </li>
+
+        </Link>
+
+        <Link to="/">
+          <li>
+            <button className="PhoRu">
+              <h3>Pho Ru</h3>
             </button>
           </li>
         </Link>
 
-        <ul className="nav-links">
-          <Link to="/menu">
-            <li>
-              <button className="menu-1">Menu</button>
-            </li>
-          </Link>
-          <Link to="/order">
-            <li>
-              <button className="order">Order</button>
-            </li>
-          </Link>
-          <Link to="/contact">
-            <li>
-              <button className="contact-btn">Contact</button>
-            </li>
-          </Link>
 
-          <Link to="/about">
+        <ul className="nav-links">
+        <Link to="/about">
             <li>
-              <button className="about-btn">About</button>
+              <button className="about-btn">ABOUT</button>
             </li>
-          </Link>
+        </Link>  
+        <Link to="/menu">
+            <li>
+              <button className="menu-1">MENU</button>
+            </li>
+        </Link>
+        <Link to="/contact">
+            <li>
+              <button className="contact-btn">CONTACT</button>
+            </li>
+        </Link>
         </ul>
 
         {/* -- Click on Cart Icon bring user to Menu Page */}

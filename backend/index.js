@@ -1,10 +1,12 @@
-const express =  require('express');
+const express = require('express');
 const app = express(); //-- to make api request 
 const cors = require('cors');
-const db = require("./models");
 
 app.use(express.json());
 app.use(cors());
+
+//-- import database models from models folder
+const db = require("./models");
 
 const usersRouter = require("./routes/Users");
 app.use("/auth", usersRouter)

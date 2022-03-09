@@ -1,2 +1,4 @@
 node_modules
+./frontend/restaurant/node_modules
+./backend/node_modules
 package-lock.json

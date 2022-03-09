@@ -49,12 +49,12 @@
 /* -- Specific components    */
 /* ------------------------ */
 
-.form-login {
+/* .form-login {
     position: fixed;
     padding-top: 20%;
     padding-bottom: 20%;
     padding-left: 40%;
-}
+} */
 
 
 .menu-1,.contact-btn,.about-btn{
@@ -288,7 +288,7 @@ h4{
     border-bottom: 1px solid silver;
 }
 
-.login-container form {
+.login-container .login-form {
     padding: 0 40px;
     box-sizing: border-box;
 }

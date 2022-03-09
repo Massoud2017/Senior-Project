@@ -17,9 +17,8 @@ function Login() {
 			if (response.data.error) {
 				alert(response.data.error);
 			} else {
-				console.log(response);
-				console.log(response.data);
 				sessionStorage.setItem('accessToken', response.data);
+        //-- When logged in, redirect to homepage
 				// navigate('/');
 			}
 		});
@@ -29,7 +28,7 @@ function Login() {
     <div className='login-body'>
       <div className='login-container'>
         <h1>Login</h1>
-        <form>
+        <div className='login-form'>
           <div className='form-text-field'>
             <input
 							required
@@ -58,7 +57,7 @@ function Login() {
           <div className='signup-link'>
 						Not a member? <Link to='/signup'>Signup</Link>
           </div>
-        </form>
+        </div>
       </div>
     </div>
   )

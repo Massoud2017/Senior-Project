@@ -4,6 +4,9 @@
 /* -- Google's font: Capriola */
 @import url('https://fonts.googleapis.com/css2?family=Capriola&family=Lexend:wght@300&display=swap');
 
+/* -- Open Sans - Bold 700 */
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@700&display=swap');
+
 
 /* --------------------  */
 /* -- General styles    */
@@ -61,32 +64,32 @@
     font-size: 1.3rem;
     cursor: pointer;
     text-decoration: none;
-    color: rgb(211, 82, 8);
-    background-color: #f4efe6;
+    color: rgb(31, 61, 3);
+    background-color: transparent;
     justify-content: center;
     border: none;
   }
 
   .contact{
+    font-family: 'Lexend', sans-serif;
     display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 15px 25px;
-    font-size: 18px;
+    flex-direction: row;
+    align-items: left;
+    padding: 15px 50px;
     cursor: pointer;
-    text-align: center;
     text-decoration: none;
     outline: none;
     color: #fff;
     background-color: #080807;
     border: none;
-    border-radius: 15px;
   }
 
   h2 {
-    font-size: 1.25rem;
+    font-size: 1.55rem;
     font-weight: 0;
-    margin-top: 0.5em;
+    margin-top: 0.8em;
+    text-align: left;
+    font-family: 'Open Sans', sans-serif;
   }
 
   .login{ 
@@ -99,7 +102,7 @@
     flex-direction: column;
     justify-content: center;
     border: none;
-    background-color: #f4efe6;
+    background-color: transparent;
     width: auto;
     height: auto;
 }
@@ -129,7 +132,7 @@
   align-items: center;
   cursor: pointer;
   text-decoration: none;
-  background-color: #f4efe6;
+  background-color: transparent;
   justify-content: center;
   border: none;
   font-size: 3.1rem;
@@ -144,7 +147,16 @@
 
 li{
     list-style-type: none;
-    font-size: 1rem; 
+    font-size: 1.05rem;
+    text-align: left; 
+}
+
+h4{
+    list-style-type: none;
+    font-size: 1.05rem;
+    margin-top: 0.3em;
+    margin-bottom: 0.8em;
+    text-align: left;
 }
 
 /* ---------------- */
@@ -159,9 +171,9 @@ li{
     padding-left: 2%;
     padding-right: 2%;
     padding-bottom: 2%;
-    background: #f2e0c4; 
+    background:black; 
     text-align:center;
-
+    font-family: 'Lexend', sans-serif;
 }
 
 .about-title{
@@ -182,12 +194,12 @@ li{
     padding-left: 2%;
     padding-right: 2%;
     padding-bottom: 2%;
-    background: #f2e0c4;   
+    background: black;   
 
 }
 
 .about-top-container div, .about-title div, .about-text div{
-    background: #f4f1de;
+    background: #f4efe6;
     padding: 10px;
     text-align: center;
 }
@@ -203,7 +215,7 @@ li{
     align-items: center;
     padding-left: 0.55rem;
     font-size: 1.3rem;
-    background-color: #f4efe6;
+    background-color: transparent;
     justify-content: center;
     border: none;
 }
@@ -354,13 +366,13 @@ li{
 
 .login-btn {
     font-family: 'Lexend', sans-serif;
-    color: rgb(211, 82, 8);
+    color: rgb(31, 61, 3);
     margin: 0.75rem;
     cursor: pointer;
     display: inline-flex;
     align-items: center;
     font-size: 1.2rem;
-    background-color: #f4efe6;
+    background-color: transparent;
     justify-content: center;
     white-space: nowrap;
     border: none;
@@ -373,7 +385,7 @@ li{
 
 .login-btn-signup {
     font-family: 'Lexend', sans-serif;
-    color: rgb(211, 82, 8);
+    color: rgb(31, 61, 3);
     margin: 0.25rem;
     cursor: pointer;
     display: inline-flex;
@@ -381,7 +393,7 @@ li{
     padding-left: 0.15rem;
     padding-right: 2rem;
     font-size: 1.2rem;
-    background-color: #f4efe6;
+    background-color: transparent;
     justify-content: center;
     white-space: nowrap;
     border: none;

@@ -1,4 +1,3 @@
-
 import React from "react";
 import { Formik, Form, Field, ErrorMessage } from "formik";
 import * as Yup from "yup";
@@ -80,15 +79,6 @@ function Register() {
             name="passwordConfirmation"
             placeholder="Your Password..."
           />
-          <ErrorMessage name="check" component="span" />
-          <label> <p>I accept the <u>Terms and Conditions</u></p></label>
-          <Field
-            autocomplete="off"
-            id="inputCreatePost"
-            input type="checkbox" required name="terms" 
-            name="check"
-          />
-          
           <button type="submit">Sign Up</button>
         </Form>
       </Formik>

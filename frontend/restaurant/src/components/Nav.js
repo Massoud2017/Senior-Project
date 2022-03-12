@@ -62,6 +62,11 @@ function Nav() {
             <button className="login-btn-signup">Register</button>
           </li>
         </Link>
+        <Link to="/profile">
+          <li>
+            <button className="profile-btn">Profile</button>
+          </li>
+        </Link>
       </nav>
     </div>
   );

@@ -19,7 +19,7 @@ function Login() {
 			} else {
 				sessionStorage.setItem('accessToken', response.data);
         //-- When logged in, redirect to homepage
-				// navigate('/');
+				 navigate('/');
 			}
 		});
   };

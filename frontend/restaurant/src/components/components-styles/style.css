@@ -23,24 +23,30 @@
 
 .col-1 {
     flex: 1;
+    color: white;
+    font-family: 'Lexend', sans-serif;
 }
   
 .col-2 {
     flex: 3;
+    margin-top: 0.8rem;
+    margin-bottom: 0.8rem;
 }
 
 .col-3 {
     flex: 1;
-    background-color: #e0e0e0;
+    background-color: black;
     flex-direction: column;
     display: flex;
+    color: white;
+    font-family: 'Lexend', sans-serif;
 }
 
 
 .block {
-    background-color: #e0e0e0;
+    background-color: black;
     padding: 1rem;
-    margin: 0.5rem;
+    margin-top: 0.5rem;
     border-radius: 0.5rem;
 }
 
@@ -85,11 +91,19 @@
   }
 
   h2 {
+    font-size: 1.6rem;
+    margin-top: 0.2em;
+    text-align: left;
+    font-family: 'Open Sans', sans-serif;
+  }
+
+  h5 {
     font-size: 1.55rem;
     font-weight: 0;
     margin-top: 0.8em;
     text-align: left;
     font-family: 'Open Sans', sans-serif;
+    cursor: default;
   }
 
   .login{ 
@@ -105,6 +119,7 @@
     background-color: transparent;
     width: auto;
     height: auto;
+    cursor: pointer;
 }
 
 .order:hover {
@@ -147,13 +162,14 @@
 
 li{
     list-style-type: none;
-    font-size: 1.05rem;
+    font-size: 1.25rem;
     text-align: left; 
+    padding-right: 1.5rem;
 }
 
 h4{
     list-style-type: none;
-    font-size: 1.05rem;
+    font-size: 1.25rem;
     margin-top: 0.3em;
     margin-bottom: 0.8em;
     text-align: left;
@@ -226,9 +242,11 @@ h4{
     margin: 0.1rem;
     border-radius: 0.5rem;
     border: 0.1rem #404040 solid;
-    background-color: #f0c040;
-    width: 100%;
+    background-color: black;
+    width: 95%;
     cursor: pointer;
+    color: white;
+    margin-top: 1.5rem;
 }
 
 .add-cart-btn.add {
@@ -246,6 +264,12 @@ h4{
     border: none;
     color: #ffffff;
     width: 1.5rem;
+}
+
+.add-cart-btn:hover {
+    cursor: pointer;
+    color: black;
+    background-color: goldenrod;
 }
 
 .text-right {

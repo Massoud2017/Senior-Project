@@ -2,6 +2,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  cursor: default;
 }
 
 body{
@@ -38,21 +39,27 @@ body{
   margin-left: 20px;
 }
 
+p{
+  color: rgb(0, 0, 0);
+  font-size: 1.25rem;
+}
 
 .menu{
-  padding: 0 5rem;
+  padding: 0rem 1.5rem;
+  margin-right: 3.5rem;
   width: 90%;
   height: auto;
   display: flex;
-  justify-content: center;
   flex-direction: row;
 }
+
 h1{
-  font-size: 1rem;
+  font-size: 1.2rem;
   font-weight: 200;
+  margin-top: 0.3rem;
+  margin-bottom: 0.5rem;
+  font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
-
-
 
 h2{
   font-size: 1.25rem;
@@ -60,19 +67,13 @@ h2{
   margin: 0rem 0;
 }
 
+h2:hover{
+  transition: all .3s ease-in-out;
+}
+
 h3{
   color: rgb(0, 0, 0);
-}
-
-h2:hover{
   cursor: pointer;
-  transition: all .3s ease-in-out;
-  color: #037FFF;
-}
-
-p{
-  color: rgb(0, 0, 0);
-  font-size: 1.25rem;
 }
 
 .item{
@@ -87,7 +88,7 @@ p{
 }
 
 .item-con{
-  width: 100%;
+  width: 125%;
   padding: 1.2rem 1.2rem;
 }
 
@@ -103,7 +104,7 @@ menubuttons{
   font-size: 1.75rem;
   width: 90%;
   text-align: center;
-  margin: 1.=25rem 1.25rem;
+  margin: 0.8rem 1.05rem;
 }
 
 menubuttons:hover {

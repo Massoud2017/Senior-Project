@@ -11,16 +11,16 @@ function Contact() {
   return (
     <div className="contact">
       <div>
-        <h2>LOCATION AND HOURS</h2>
+        <h5>LOCATION AND HOURS</h5>
         <ul>
           <h4>6116 Mack Road Sacramento, CA 95823</h4>
           <li><b>Monday</b> Closed</li>
           <li><b>Tuesday to Sunday</b></li>
           <li>10:00 am - 9:00 pm</li>
         </ul>
-        <h2>GET IN TOUCH</h2>
+        <h5>GET IN TOUCH</h5>
         <ul>
-          <li>Have questions? We're happy to answer them! Give us a call at 916-476-3754 or email us at email@email.com </li>
+          <li>Have questions? We're happy to answer them! Give us a call at 916-476-3754 or email us at phorurestaurant@email.com </li>
           <li>
             <div className="socialMedia">
               <h4>Find us on Instagram and Facebook</h4>

@@ -76,6 +76,7 @@
     border: none;
   }
 
+
   .contact{
     font-family: 'Lexend', sans-serif;
     display: flex;
@@ -178,41 +179,43 @@ h4{
 /* ---------------- */
 /* -- For About    */
 /* -------------- */
-
-.about-top-container{
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
-    padding-top: 2%;
-    padding-left: 2%;
-    padding-right: 2%;
-    padding-bottom: 2%;
-    background:black; 
-    text-align:center;
-    font-family: 'Lexend', sans-serif;
+@media(min-width:720px){
+    .about-top-container{
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        padding-top: 2%;
+        padding-left: 2%;
+        padding-right: 2%;
+        padding-bottom: 2%;
+        background:black; 
+        text-align:center;
+        font-family: 'Lexend', sans-serif;
+    }
+    
+    .about-title{
+        text-align:center;
+        font-size: 30px;
+        padding-bottom: 1%;
+    }
+    .about-text{
+        text-align: center;
+        font-size: 25px;
+        padding-top: 1%;
+    }
+    .about-bottom-container{
+        display: flex;
+        justify-content: space-around;
+        /*flex-wrap: wrap;*/
+        padding-top: 2%;
+        padding-left: 2%;
+        padding-right: 2%;
+        padding-bottom: 2%;
+        background: black;   
+    
+    }
 }
 
-.about-title{
-    text-align:center;
-    font-size: 30px;
-    padding-bottom: 1%;
-}
-.about-text{
-    text-align: center;
-    font-size: 25px;
-    padding-top: 1%;
-}
-.about-bottom-container{
-    display: flex;
-    justify-content: space-around;
-    /*flex-wrap: wrap;*/
-    padding-top: 2%;
-    padding-left: 2%;
-    padding-right: 2%;
-    padding-bottom: 2%;
-    background: black;   
-
-}
 
 .about-top-container div, .about-title div, .about-text div{
     background: #f4efe6;

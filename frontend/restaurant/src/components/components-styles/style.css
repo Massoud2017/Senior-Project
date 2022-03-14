@@ -454,3 +454,82 @@ h4{
 .btn-login {
     margin-left: 1in;
 }
+
+
+/* ------------------------ */
+/* -- For Checout Popup    */
+/* ---------------------- */
+
+.chekoutpopup {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.2);
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.checkoutpopup-inner {
+  position: relative;
+  padding: 32px;
+  width: 100%;
+  max-width: 640px;
+  background-color: #FFF;
+}
+
+.chekoutpopup .close-btn {
+  position: absolute;
+  border: none;
+  margin-top: 0.5rem;
+  margin-right: 0.5rem;
+  top: 0px;
+  right: 0px;
+  width: 3%;
+  background-color: transparent;
+}
+
+.chekoutpopup .close-btn img{
+  width: 100%;
+}
+
+.chekoutpopup .close-btn img:hover {
+  cursor: pointer;
+}
+
+.word-middle-hr {
+  width: 100%; 
+  text-align: center; 
+  border-bottom: 1px solid silver; 
+  line-height: 0.1em;
+  margin: 20px 0 20px;
+}
+
+.word-middle-hr span {
+  background:#fff;
+  color: silver;
+  margin: auto;
+  padding: 0 10px;
+  
+}
+
+.payasguest-btn-container {
+  display: flex;
+  justify-content: center;
+}
+
+.payasguest-btn {
+  width: 80%;
+  height: 50px;
+  border: 1px solid;
+  background: #2691d9;
+  border-radius: 25px;
+  font-size: 18px;
+  color: #e9f4fb;
+  font-weight: 700;
+  cursor: pointer;
+  outline: none;
+}

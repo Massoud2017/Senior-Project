@@ -22,6 +22,7 @@ function App() {
   //-- Tracking states For Basket: tracking Cart's items
   const [cartItems, setCartItems] = useState([]);
   const [totalCartItems, setTotalCartItems] = useState(0);
+  const [isCartClicked, setIsCartClicked] = useState(false);
 
   //-- Functions for Cart
   const onAddToCart = (item) => {
@@ -51,6 +52,10 @@ function App() {
     }
     setTotalCartItems(totalCartItems - 1);
   };
+
+  const toggleCartClicked = () => {
+    setIsCartClicked(!isCartClicked);
+  }
   //-- End of Functions for Cart
 
   return (
@@ -58,8 +63,10 @@ function App() {
       value={{
         cartItems: cartItems,
         totalCartItems: totalCartItems,
+        isCartClicked: isCartClicked,
         onAddToCart: onAddToCart,
-        onRemoveFromCart: onRemoveFromCart
+        onRemoveFromCart: onRemoveFromCart,
+        toggleCartClicked: toggleCartClicked
       }}
     >
       <div className="app">

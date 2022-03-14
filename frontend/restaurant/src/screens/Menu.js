@@ -27,18 +27,29 @@ function Menu() {
   }
 
   //-- Get Context value from CartContext in App.js
-  const { cartItems, onAddToCart, onRemoveFromCart } = useContext(CartContext);
+  const { cartItems, onAddToCart, onRemoveFromCart, isCartClicked } = useContext(CartContext);
 
   return (
     <div className="row">
       <div className="col-3">
         <Button button={buttons} filter={filter} />
       </div>
+
       <div className="menu col-2">
         <MenuItems menuItem={menuItem} onAddToCart={onAddToCart} />
       </div>
 
-      <Basket cartItems={cartItems} onAddToCart={onAddToCart} onRemoveFromCart={onRemoveFromCart} />
+      {
+        isCartClicked ? (
+          <Basket 
+            cartItems={cartItems}
+            onAddToCart={onAddToCart}
+            onRemoveFromCart={onRemoveFromCart}
+          />
+        ) : (
+          ''
+        )
+      }
     </div>
   );
 }

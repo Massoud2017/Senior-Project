@@ -5,7 +5,7 @@ import "./components-styles/style.css";
 
 function Nav() {
   //-- Get Context value from CartContext in App.js
-  const { totalCartItems } = useContext(CartContext);
+  const { totalCartItems, toggleCartClicked } = useContext(CartContext);
 
   return (
     <div className="nav">
@@ -49,8 +49,8 @@ function Nav() {
         {/* -- Click on Cart Icon bring user to Menu Page */}
         <Link to="/menu">
           <li className='cart-btn-container'>
-            <button className="cart-btn">
-              <img src={require('../assets/cart-icons8-64.png')} alt="Symbol Icon Cart" width={40} height={40} />
+            <button className="cart-btn" onClick={() => toggleCartClicked()}>
+              <img className="cart-btn-img" src={require('../assets/cart-icons8-64.png')} alt="Symbol Icon Cart" width={40} height={40} />
             </button>
             {
               totalCartItems > 0 ? (

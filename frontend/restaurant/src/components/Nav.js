@@ -1,8 +1,12 @@
-import React from "react";
+import React, { useContext } from "react";
 import { Link } from "react-router-dom";
+import { CartContext } from '../App';
 import "./components-styles/style.css";
 
 function Nav() {
+  //-- Get Context value from CartContext in App.js
+  const { totalCartItems } = useContext(CartContext);
+
   return (
     <div className="nav">
       <nav>
@@ -44,10 +48,17 @@ function Nav() {
 
         {/* -- Click on Cart Icon bring user to Menu Page */}
         <Link to="/menu">
-          <li>
+          <li className='cart-btn-container'>
             <button className="cart-btn">
               <img src={require('../assets/cart-icons8-64.png')} alt="Symbol Icon Cart" width={40} height={40} />
             </button>
+            {
+              totalCartItems > 0 ? (
+                <button className="cart-badge">{totalCartItems}</button>
+              ) : (
+                ''
+              )
+            }
           </li>
         </Link>
 

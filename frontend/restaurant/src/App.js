@@ -9,30 +9,77 @@ import Nav from "./components/Nav";
 import Order from "./screens/Order";
 import Profile from "./screens/Profile"
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import React from "react";
+import React, { useState } from "react";
 import "./App.css";
 import "./components/components-styles/style.css"
 import Register from "./screens/Register";
 
+//-- Create a Context for Cart
+export const CartContext = React.createContext();
+
 function App() {
+
+  //-- Tracking states For Basket: tracking Cart's items
+  const [cartItems, setCartItems] = useState([]);
+  const [totalCartItems, setTotalCartItems] = useState(0);
+
+  //-- Functions for Cart
+  const onAddToCart = (item) => {
+    const exist = cartItems.find(x => x.id === item.id);
+    if (exist) {
+      setCartItems(
+        cartItems.map((x) =>
+          x.id === item.id ? { ...exist, qty: exist.qty + 1 } : x
+        )
+      );
+    } else {
+      setCartItems([...cartItems, { ...item, qty: 1 }]);
+    }
+    setTotalCartItems(totalCartItems + 1);
+  };
+
+  const onRemoveFromCart = (item) => {
+    const exist = cartItems.find((x) => x.id === item.id);
+    if (exist.qty === 1) {
+      setCartItems(cartItems.filter((x) => x.id !== item.id));
+    } else {
+      setCartItems(
+        cartItems.map((x) =>
+          x.id === item.id ? { ...exist, qty: exist.qty - 1 } : x
+        )
+      );
+    }
+    setTotalCartItems(totalCartItems - 1);
+  };
+  //-- End of Functions for Cart
+
   return (
-    <div className="app">
-    <Router>
-        <Nav />
-        <Routes>
-          <Route path="/" exact element={<Home />} />
-          <Route path="/menu" element={<Menu />} />
-          <Route path="/order" element={<Order />} />
-          <Route path="/contact" element={<Contact />} />
-          <Route path="/about" element={<About />} />
-          <Route path="/login" element={<Login />} />
-          <Route path="/signup" element={<Register />} />
-          <Route path="/profile" element={<Profile/>} />
-          <Route path="/changepassword" element={<ChangePassword/>} />
-        </Routes>
-        <Footer />
-    </Router>
-    </div>
+    <CartContext.Provider 
+      value={{
+        cartItems: cartItems,
+        totalCartItems: totalCartItems,
+        onAddToCart: onAddToCart,
+        onRemoveFromCart: onRemoveFromCart
+      }}
+    >
+      <div className="app">
+        <Router>
+          <Nav />
+          <Routes>
+            <Route path="/" exact element={<Home />} />
+            <Route path="/menu" element={<Menu />} />
+            <Route path="/order" element={<Order />} />
+            <Route path="/contact" element={<Contact />} />
+            <Route path="/about" element={<About />} />
+            <Route path="/login" element={<Login />} />
+            <Route path="/signup" element={<Register />} />
+            <Route path="/profile" element={<Profile />} />
+            <Route path="/changepassword" element={<ChangePassword />} />
+          </Routes>
+          <Footer />
+        </Router>
+      </div>
+    </CartContext.Provider>
   );
 }
 

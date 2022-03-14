@@ -1,8 +1,9 @@
-import { useState } from 'react';
+import { useState, useContext } from 'react';
 import items from './MenuList.js';
 import MenuItems from './MenuItems';
 import Button from './Button';
 import Basket from './Basket';
+import { CartContext } from '../App';
 import "./Menu.css";
 
 const allCategories = ['All', ...new Set(items.map(item => item.type))];
@@ -25,36 +26,8 @@ function Menu() {
     setMenuItem(filteredData)
   }
 
-  //-- For Basket
-  // const { dishes } = items;
-  const [cartItems, setCartItems] = useState([]);
-
-  const onAddToCart = (item) => {
-    const exist = cartItems.find(x => x.id === item.id);
-    if (exist) {
-      setCartItems(
-        cartItems.map((x) =>
-          x.id === item.id ? { ...exist, qty: exist.qty + 1 } : x
-        )
-      );
-    } else {
-      setCartItems([...cartItems, { ...item, qty: 1 }]);
-    }
-  };
-
-  const onRemoveFromCart = (item) => {
-    const exist = cartItems.find((x) => x.id === item.id);
-    if (exist.qty === 1) {
-      setCartItems(cartItems.filter((x) => x.id !== item.id));
-    } else {
-      setCartItems(
-        cartItems.map((x) =>
-          x.id === item.id ? { ...exist, qty: exist.qty - 1 } : x
-        )
-      );
-    }
-  };
-  //-- End of for Basket
+  //-- Get Context value from CartContext in App.js
+  const { cartItems, onAddToCart, onRemoveFromCart } = useContext(CartContext);
 
   return (
     <div className="row">
@@ -64,7 +37,6 @@ function Menu() {
       <div className="menu col-2">
         <MenuItems menuItem={menuItem} onAddToCart={onAddToCart} />
       </div>
-
 
       <Basket cartItems={cartItems} onAddToCart={onAddToCart} onRemoveFromCart={onRemoveFromCart} />
     </div>

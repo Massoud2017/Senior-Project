@@ -227,6 +227,10 @@ h4{
 /* -- For Cart    */
 /* ------------- */
 
+.cart-btn-container {
+  display: flex;
+}
+
 .cart-btn {
     margin: 0.5rem;
     cursor: pointer;
@@ -237,6 +241,19 @@ h4{
     background-color: transparent;
     justify-content: center;
     border: none;
+}
+
+.cart-badge {
+    font-size: 0.7rem;
+    font-weight: 900;
+    background: #f04040;
+    color: #fff;
+    border-radius: 0.5rem;
+    padding: 0 5px;
+    vertical-align: top;
+    margin-left: -10px;
+    height: 1.3rem;
+    text-align: center;
 }
 
 .add-cart-btn {

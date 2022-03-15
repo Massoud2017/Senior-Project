@@ -16,7 +16,8 @@ function Home() {
             </div>
             <div className="intro-header">
                 <h1>Pho Ru</h1>
-                <p>Vietnamese cuisine restaurant</p>
+                <p>Vietnamese Southeast Asian Cuisine Restaurant</p>
+                <p>Sacramento, CA</p>
             </div>
         </div>
     )

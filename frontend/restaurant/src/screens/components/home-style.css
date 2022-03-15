@@ -34,17 +34,23 @@ body {
 
 .intro .intro-header {
   border-radius: 0.5rem;
-  padding: 2rem 2.5rem;
+  padding: 15rem 39rem;
+  height: 100vh;
   background-color: rgba(0,0,0,0.5);
 }
 .intro h1 {
-  font-size: 4rem;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 10rem;
   margin-bottom: 0.75rem;
+  white-space: nowrap;
   color: #fff;
 }
 .intro p {
-  font-size: 1.75rem;
+  font-size: 2rem;
   color: #fff;
+  white-space: nowrap;
+  font-family: 'Montserrat', sans-serif;
+  padding-bottom: 1rem;
 }
 
 @media (max-width: 700px) {

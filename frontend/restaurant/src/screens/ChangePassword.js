@@ -35,15 +35,15 @@ function ChangePassword() {
         onChange={(event) => {
           setOldPassword(event.target.value);
         }}
-      />
+      /><br/>
       <input
         type="text"
         placeholder="New Password..."
         onChange={(event) => {
           setNewPassword(event.target.value);
         }}
-      />
-      <button onClick={changePassword}> Save Changes</button>
+      /><br/>
+      <button onClick={changePassword}>Save Changes</button>
     </div>
   );
 }

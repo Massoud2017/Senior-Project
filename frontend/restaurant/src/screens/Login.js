@@ -1,9 +1,7 @@
 import React , {useState, useEffect} from 'react';
 import { Link, useNavigate } from "react-router-dom";
 import axios from 'axios';
-//-- Uncomment me when you're ready ----------------------------
-// import GoogleLoginButton from './components/GoogleLoginButton'
-//--------------------------------------------------------------
+import GoogleLoginButton from './GoogleLogin.js';
 
 function Login() {
   const [username, setUsername] = useState('');
@@ -49,13 +47,13 @@ function Login() {
             	}}
 						/>
           </div>
-          <button className='form-login-btn' onClick={login}>Login</button>
-          {/* <input type='submit' value='Login' /> */}
-          {/*-- For Nam to implement Google login */}
-          {/* <GoogleLoginButton className='google-login-btn' /> */}
-          {/* -- End of Google Login */}
+            <button className='form-login-btn' onClick={login}>Login</button>
+          <div className='g-signin'>
+            <GoogleLoginButton/>
+          </div>
           <div className='signup-link'>
-						Not a member? <Link to='/signup'>Signup</Link>
+						Not a member? <Link to='/signup'>Register an account</Link><br/>
+            Forgot your password? <Link to='/changepassword'>Reset password</Link>
           </div>
         </div>
       </div>

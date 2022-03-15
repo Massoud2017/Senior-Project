@@ -15,7 +15,7 @@ function Menu() {
   const [buttons, setButtons] = useState(allCategories);
 
   //Filter Function
-  const filter = (button) =>{
+  const filter = (button)=>{
 
     if(button === 'All'){
       setMenuItem(items);

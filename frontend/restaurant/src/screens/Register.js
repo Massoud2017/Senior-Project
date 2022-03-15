@@ -38,42 +38,42 @@ function Register() {
         <label>First name: </label>
           <ErrorMessage name="name" component="span" />
           <Field
-            autocomplete="off"
+            autoComplete="off"
             id="inputCreatePost"
             name="name"
             placeholder="(Ex. John)"
           />
-          <label>Last name: </label>
+          <label>Last name:</label>
           <ErrorMessage name="last_name" component="span" />
           <Field
-            autocomplete="off"
+            autoComplete="off"
             id="inputCreatePost"
             name="last_name"
             placeholder="(Ex. Smith...)"
           />
-          <label>Email: </label>
+          <label>Email:</label>
           <ErrorMessage name="username" component="span" />
           <Field
-            autocomplete="off"
+            autoComplete="off"
             id="inputCreatePost"
             type="email"
             name="username"
             placeholder="Enter your Email"
           />
 
-          <label>Password: </label>
+          <label>Password:</label>
           <ErrorMessage name="password" component="span" />
           <Field
-            autocomplete="off"
+            autoComplete="off"
             type="password"
             id="inputCreatePost"
             name="password"
             placeholder="Your Password..."
           />
-         <label>Confirm Password: </label>
+         <label>Confirm Password:</label>
           <ErrorMessage name="passwordConfirmation" component="span" />
           <Field
-            autocomplete="off"
+            autoComplete="off"
             type="password"
             id="inputCreatePost"
             name="passwordConfirmation"

@@ -11,7 +11,6 @@ function Button({button, filter}) {
                 }
             </div>
         </aside>
-
     )
 }
 

@@ -39,7 +39,7 @@ function Register() {
           <ErrorMessage name="name" component="span" />
           <Field
             autoComplete="off"
-            id="inputCreatePost"
+            id="input_sign_up"
             name="name"
             placeholder="(Ex. John)"
           />
@@ -47,7 +47,7 @@ function Register() {
           <ErrorMessage name="last_name" component="span" />
           <Field
             autoComplete="off"
-            id="inputCreatePost"
+            id="last_name_input"
             name="last_name"
             placeholder="(Ex. Smith...)"
           />
@@ -55,7 +55,7 @@ function Register() {
           <ErrorMessage name="username" component="span" />
           <Field
             autoComplete="off"
-            id="inputCreatePost"
+            id="input_email"
             type="email"
             name="username"
             placeholder="Enter your Email"
@@ -66,7 +66,7 @@ function Register() {
           <Field
             autoComplete="off"
             type="password"
-            id="inputCreatePost"
+            id="input_password"
             name="password"
             placeholder="Your Password..."
           />
@@ -75,7 +75,7 @@ function Register() {
           <Field
             autoComplete="off"
             type="password"
-            id="inputCreatePost"
+            id="input_confirm"
             name="passwordConfirmation"
             placeholder="Your Password..."
           />

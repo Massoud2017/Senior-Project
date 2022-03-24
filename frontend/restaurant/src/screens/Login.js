@@ -1,12 +1,12 @@
-import React , {useState, useEffect} from 'react';
+import React , {useState, useEffect,useContext} from 'react';
 import { Link, useNavigate } from "react-router-dom";
 import axios from 'axios';
 import GoogleLoginButton from './GoogleLogin.js';
-
+import { AuthContext } from "../helpers/AuthContext";
 function Login() {
   const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
-
+  const { setAuthState } = useContext(AuthContext);
 	let navigate = useNavigate();
 
   const login = () => {
@@ -17,8 +17,11 @@ function Login() {
 			} else {
 				sessionStorage.setItem('accessToken', response.data);
         //-- When logged in, redirect to homepage
-				 navigate('/');
+        navigate('/');
+        window.location.reload();
+        setAuthState(true);
 			}
+      
 		});
   };
   

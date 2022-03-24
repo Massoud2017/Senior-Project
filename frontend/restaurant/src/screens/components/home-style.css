@@ -9,6 +9,9 @@ body {
   font-family: 'Montserrat', sans-serif;
   color: #fff;
 }
+.Yelpreviews {
+  font-size: xx-small;
+}
 
 .intro {
   height: 100vh;

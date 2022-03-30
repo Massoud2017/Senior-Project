@@ -313,10 +313,28 @@ h4{
     padding: 0;
     font-family: 'Montserrat', sans-serif;
     /* background: linear-gradient(120deg,#2980b9,#8e44ad); */
-    background: linear-gradient(120deg,#f4f1de,#f2cc8f);
+    background: black;
     /* height: 100vh; */
     width: 100%;
     height: 100%;
+}
+
+.login-top-text-field h2 {
+    color: white;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 4rem;
+    flex-direction: column;
+    text-align: center;
+}
+
+.login-top-text-field h3 {
+    color: white;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.2rem;
+    flex-direction: column;
+    text-align: center;
+    margin-top: 1rem;
+    cursor: default;
 }
 
 .login-container{
@@ -324,11 +342,12 @@ h4{
     left: 25%;
     width: 50%;
     background: white;
-    border-radius: 10px;
-    margin: 12% 0;
+    border-radius: 30px;
+    margin: 3% 0;
 }
 
 .login-container h1 {
+    font-family: 'Montserrat', sans-serif;
     font-size: 30px;
     font-weight: 700;
     text-align: center;
@@ -361,9 +380,10 @@ h4{
     width: 100%;
     height: 50px;
     border: 1px solid;
-    background: #2691d9;
+    background: black;
     border-radius: 25px;
     font-size: 18px;
+    font-family: 'Montserrat', sans-serif;
     color: #e9f4fb;
     font-weight: 700;
     cursor: pointer;
@@ -372,6 +392,7 @@ h4{
 
 .form-login-btn:hover {
     border-color: #2691d9;
+    background: #2691d9;
     transition: .3s;
 }
 

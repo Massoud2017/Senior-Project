@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import {useNavigate } from "react-router-dom";
+import { Formik, Form, Field, ErrorMessage } from "formik";
 import axios from "axios";
 function Profile() {
   
@@ -24,7 +25,7 @@ function Profile() {
 
   return (
     <div className="profilePageContainer">
-      <div className="basicInfo">
+      <div className="basicInfo">    
         {" "}
         <h1> Email: {username} </h1>
         <h1> Name: {name} </h1>
@@ -42,8 +43,9 @@ function Profile() {
           <h1>Order History</h1>
       </div>
       <div className="point-container"> 
-          <h1></h1>
+          <h1></h1>  
       </div>
+      
     </div>
   );
 }

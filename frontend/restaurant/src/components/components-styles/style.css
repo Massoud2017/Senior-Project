@@ -415,7 +415,7 @@ h4{
     transition: .3s;
 }
 
-.signup-link {
+.signup-link, .Prof_logoutContainer {
     margin: 0;
     padding: 5px 0 20px 0;
     text-align: center;
@@ -424,16 +424,16 @@ h4{
     color: #666666;
 }
 
-.signup-link a {
+.signup-link a ,.Prof_logoutContainer{
     color: #2691d9;
     text-decoration: none;
 }
 
-.signup-link a:hover {
+.signup-link a, .Prof_logoutContainer a:hover {
     text-decoration: underline;
 }
 
-.login-btn {
+.login-btn,.Prof_logoutContainer {
     font-family: 'Lexend', sans-serif;
     color: rgb(31, 61, 3);
     margin: 0.75rem;
@@ -452,7 +452,7 @@ h4{
     color: black;
 }
 
-.login-btn-signup {
+.login-btn-signup, .Prof_logoutContainer {
     font-family: 'Lexend', sans-serif;
     color: rgb(31, 61, 3);
     margin: 0.25rem;
@@ -468,7 +468,7 @@ h4{
     border: none;
 }
 
-.login-btn-signup:hover {
+.login-btn-signup, .Prof_logoutContainer:hover {
     cursor: pointer;
     color: black;
 }

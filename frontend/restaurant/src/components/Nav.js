@@ -1,15 +1,50 @@
 import React, { useContext } from "react";
-import { Link } from "react-router-dom";
+import { Link,useNavigate  } from "react-router-dom";
 import { CartContext } from '../App';
 import "./components-styles/style.css";
+import axios from "axios";
+import { useState, useEffect } from "react";
+import { AuthContext } from "../helpers/AuthContext";
+
 
 function Nav() {
+  let navigate = useNavigate();
+  const [authState, setAuthState] = useState(false);
+
+  useEffect(() => {
+    axios
+      .get("http://localhost:3001/auth/auth", {
+        headers: {
+          accessToken: sessionStorage.getItem("accessToken"),
+        },
+      })
+      .then((response) => {
+        if (response.data.error) {
+          setAuthState(false);
+        } else {
+          setAuthState(true);
+        }
+      });
+  }, []);
   //-- Get Context value from CartContext in App.js
-  const { totalCartItems, toggleCartClicked } = useContext(CartContext);
+  const { totalCartItems, toggleCartClicked} = useContext(CartContext);
+  
+  const profile_button = () => {
+    navigate("/profile");
+    
+  };
+  const logout = () => {
+    sessionStorage.removeItem("accessToken");
+    navigate("/");
+    setAuthState(false);
+  };
+  
 
   return (
     <div className="nav">
+      <AuthContext.Provider value={{ authState, setAuthState }}>
       <nav>
+      
         <Link to="/">
           <li>
             <button className="logo">
@@ -61,25 +96,36 @@ function Nav() {
             }
           </li>
         </Link>
-
+        {!authState ? (
+          <>
         <Link to="/login">
           <li>
             <button className="login-btn">Sign In</button>
           </li>
         </Link>
-
+        
         <Link to="/signup">
           <li>
             <button className="login-btn-signup">Register</button>
           </li>
         </Link>
-        <Link to="/profile">
-          <li>
-            <button className="profile-btn">Profile</button>
-          </li>
-        </Link>
+        </>
+        
+        ) : (
+        <div className="Prof_logoutContainer">
+
+        
+        <button onClick={profile_button}> profile</button>
+        <button onClick={logout}> Logout</button>
+
+        </div>
+        
+        )}
+        
       </nav>
+      </AuthContext.Provider>
     </div>
+    
   );
 }
 

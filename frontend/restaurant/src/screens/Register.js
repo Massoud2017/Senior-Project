@@ -27,59 +27,64 @@ function Register() {
   };
 
   return (
-    <div>
+    <div className = "Register-Background">
+      <div className="text-column-container">
+        <h4>JOIN THE PHO RU FAMILY!</h4>
+        <h6>GET EXCLUSIVE DEALS AND COUPONS RIGHT TO YOUR INBOX</h6>
+        <h1>*By providing your email, you are agreeing to be contacted through this email as part of the program.</h1>
+      </div>
+     
       <Formik
         initialValues={initialValues}
         onSubmit={onSubmit}
         validationSchema={validationSchema}
       >
+        
         <Form className="formContainer">
-          <h1>Sign Up</h1>
-        <label>First name: </label>
-          <ErrorMessage name="name" component="span" />
+          <ErrorMessage name="name" component="span" style={{ color: 'red'}}/>
           <Field
             autoComplete="off"
             id="input_sign_up"
             name="name"
-            placeholder="(Ex. John)"
+            placeholder="First Name"
+            className = "input-field"
           />
-          <label>Last name:</label>
-          <ErrorMessage name="last_name" component="span" />
+          <ErrorMessage name="last_name" component="span" style={{ color: 'red'}}/>
           <Field
             autoComplete="off"
             id="last_name_input"
             name="last_name"
-            placeholder="(Ex. Smith...)"
+            placeholder="Last Name"
+            className = "input-field"
           />
-          <label>Email:</label>
-          <ErrorMessage name="username" component="span" />
+          <ErrorMessage name="username" component="span" style={{ color: 'red'}}/>
           <Field
             autoComplete="off"
             id="input_email"
             type="email"
             name="username"
-            placeholder="Enter your Email"
+            placeholder="Email"
+            className = "input-field"
           />
-
-          <label>Password:</label>
-          <ErrorMessage name="password" component="span" />
+          <ErrorMessage name="password" component="span" style={{ color: 'red'}}/>
           <Field
             autoComplete="off"
             type="password"
             id="input_password"
             name="password"
-            placeholder="Your Password..."
+            placeholder="Password"
+            className = "input-field"
           />
-         <label>Confirm Password:</label>
-          <ErrorMessage name="passwordConfirmation" component="span" />
+          <ErrorMessage name="passwordConfirmation" component="span" style={{ color: 'red'}}/>
           <Field
             autoComplete="off"
             type="password"
             id="input_confirm"
             name="passwordConfirmation"
-            placeholder="Your Password..."
+            placeholder="Confirm Password"
+            className = "input-field"
           />
-          <button type="submit">Sign Up</button>
+          <button type="submit">SIGN UP</button>
         </Form>
       </Formik>
     </div>

@@ -59,8 +59,8 @@ function Basket(props) {
             </div>
             <hr />
             <div className="row">
-              <button className="add-cart-btn" onClick={() => setCheckoutPopup(true)}>
-                Checkout
+              <button className="checkout-button" onClick={() => setCheckoutPopup(true)}>
+                CHECKOUT
               </button>
             </div>
           </>

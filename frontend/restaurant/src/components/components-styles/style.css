@@ -220,6 +220,7 @@ h4{
     background: #f4efe6;
     padding: 10px;
     text-align: center;
+    background-color: white;
 }
 
 /* --------------- */
@@ -260,7 +261,8 @@ h4{
 }
 
 .add-cart-btn {
-    font-size: 0.8rem;
+    font-size: 0.9rem;
+    font-family: 'Lexend', sans-serif;
     padding: 0.2rem;
     margin: 0.1rem;
     border-radius: 0.5rem;
@@ -299,6 +301,23 @@ h4{
     text-align: right;
 }
 
+.checkout-button {
+    font-size: 1.3rem;
+    padding: 0.2rem;
+    margin: 0.1rem;
+    border-radius: 1rem;
+    border: 0.1rem #404040 solid;
+    background-color: dodgerblue;
+    color: black;
+    width: 95%;
+    cursor: pointer;
+    margin-top: 1.9rem;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.checkout-button:hover {
+    background-color: rgb(0, 128, 255);
+}
 
 
 /* ---------------- */

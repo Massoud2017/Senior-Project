@@ -10,7 +10,7 @@ function About() {
                 <div className="about-title">
                     <h3><strong>A Small Look Into Our 'Pho'-nominal Family Restaurant</strong></h3>
                     <div className="about-text">
-                        <p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Odio pellentesque diam volutpat commodo sed egestas. Tincidunt augue interdum velit euismod in pellentesque. Cras adipiscing enim eu turpis egestas pretium aenean pharetra. Morbi tincidunt augue interdum velit euismod. Interdum velit laoreet id donec ultrices tincidunt arcu non. Eu scelerisque felis imperdiet proin fermentum leo vel orci. Et netus et malesuada fames ac turpis. Ultrices vitae auctor eu augue ut lectus. Donec et odio pellentesque diam. Porttitor eget dolor morbi non arcu. Ut consequat semper viverra nam libero justo laoreet sit amet. Aenean vel elit scelerisque mauris"</p>  
+                        <p>Welcome to Pho Ru! We are a family-owned, Vietnamese restaurant based in South Sacramento. Our goal is to revive Vietnamese and other SouthEast Asian foods through Pho, other noodle dishes, Vietnamese meats, and seafood. The founder and chef, Patrick, is known for his famous YaYa Rainbow Trout. The chef coats a whole trout in cornmeal and deep-fries it so the skin is crunchy and the meat is tender. The sweet-funky flavor gets a major assist from fish sauce and fried garlic chips. Don't go to Pho Ru without ordering one for the table! We invite you and your loved ones to join our family and share in our cherished Vietnames cuisine of taste, togetherness, and home. </p>
                     </div>
                 </div>
 

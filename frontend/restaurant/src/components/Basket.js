@@ -1,8 +1,11 @@
-import React, { useState } from 'react';
-import CheckoutPopup from '../components/CheckoutPopup';
-import Login from './Login';
+import React, { useEffect, useState } from 'react';
+import { useNavigate } from 'react-router-dom';
+import CheckoutPopup from './CheckoutPopup';
+import Login from '../screens/Login';
 
 function Basket(props) {
+  const navigate = useNavigate();
+
   //-- For calculating prices
   const { cartItems, onAddToCart, onRemoveFromCart } = props;
   const itemsPrice = cartItems.reduce((a, c) => a + c.qty * c.price, 0);
@@ -13,6 +16,28 @@ function Basket(props) {
 
   //-- For Checkout Popup
   const [checkoutPopup, setCheckoutPopup] = useState(false);
+
+  //-- To track user's authentication
+  const [hasToken, setHasToken] = useState('');
+
+  //-- Create cartCheckoutInfo object
+  const cartCheckoutInfo = {
+    cartItems: cartItems,
+    itemsPrice: itemsPrice,
+    taxPrice: taxPrice,
+    totalPrice: totalPrice
+  };
+
+  useEffect(() => {
+    sessionStorage.getItem('accessToken') 
+    ? setHasToken(sessionStorage.getItem('accessToken')) 
+    : setHasToken('');
+  }, [hasToken]);
+
+  const onCartCheckout = () => {
+    localStorage.setItem('cartCheckoutInfo', JSON.stringify(cartCheckoutInfo));
+    navigate('/makepayment');
+  }
 
   return (
     <aside className="block col-1">
@@ -59,26 +84,31 @@ function Basket(props) {
             </div>
             <hr />
             <div className="row">
-              <button className="checkout-button" onClick={() => setCheckoutPopup(true)}>
-                CHECKOUT
+              {/* <button className="add-cart-btn" onClick={() => setCheckoutPopup(true)}>
+                Checkout
+              </button> */}
+              <button className="add-cart-btn" onClick={onCartCheckout}>
+                Checkout
               </button>
             </div>
           </>
         )}
       </div>
 
-      {/* -- This Checkout Popup is trigged by clicking on Checkout Button */}
-      <CheckoutPopup trigger={checkoutPopup} setTrigger={setCheckoutPopup}>
-        <Login />
+      {/* -- The Checkout Popup is trigged by clicking on Checkout Button */}
+      {hasToken ? <div>PaymentProcess</div> : ( 
+        <CheckoutPopup trigger={checkoutPopup} setTrigger={setCheckoutPopup}>
+          <Login />
 
-        <p className="word-middle-hr"><span>or</span></p>
+          <p className="word-middle-hr"><span>or</span></p>
 
-        <div className="payasguest-btn-container">
-          <button className='payasguest-btn' onClick={() => {alert("Bring user to Payment Screen")}}>
-            Pay as Guest
-          </button>
-        </div>
-      </CheckoutPopup>
+          <div className="payasguest-btn-container">
+            <button className='payasguest-btn' onClick={() => {alert("Bring user to Payment Screen")}}>
+              Pay as Guest
+            </button>
+          </div>
+        </CheckoutPopup>
+      )}
     </aside>
   );
 }

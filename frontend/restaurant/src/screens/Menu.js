@@ -2,8 +2,8 @@ import { useState, useContext } from 'react';
 import items from './MenuList.js';
 import MenuItems from './MenuItems';
 import Button from './Button';
-import Basket from './Basket';
-import { CartContext } from '../App';
+import Basket from '../components/Basket';
+import { CartContext } from '../helpers/CartContext';
 import "./Menu.css";
 
 const allCategories = ['All', ...new Set(items.map(item => item.type))];

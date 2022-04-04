@@ -29,14 +29,19 @@ function Basket(props) {
   };
 
   useEffect(() => {
-    sessionStorage.getItem('accessToken') 
-    ? setHasToken(sessionStorage.getItem('accessToken')) 
-    : setHasToken('');
-  }, [hasToken]);
+    localStorage.getItem('accessToken')
+      ? setHasToken(sessionStorage.getItem('accessToken'))
+      : setHasToken('');
+  }, [hasToken, setHasToken]);
 
   const onCartCheckout = () => {
     localStorage.setItem('cartCheckoutInfo', JSON.stringify(cartCheckoutInfo));
-    navigate('/makepayment');
+    if (hasToken) {
+      setCheckoutPopup(false);
+      navigate('/makepayment');
+    } else {
+      setCheckoutPopup(true);
+    }
   }
 
   return (
@@ -88,7 +93,7 @@ function Basket(props) {
                 Checkout
               </button> */}
               <button className="add-cart-btn" onClick={onCartCheckout}>
-                Checkout
+                CHECKOUT
               </button>
             </div>
           </>
@@ -96,19 +101,17 @@ function Basket(props) {
       </div>
 
       {/* -- The Checkout Popup is trigged by clicking on Checkout Button */}
-      {hasToken ? <div>PaymentProcess</div> : ( 
-        <CheckoutPopup trigger={checkoutPopup} setTrigger={setCheckoutPopup}>
-          <Login />
+      <CheckoutPopup trigger={checkoutPopup} setTrigger={setCheckoutPopup}>
+        <Login />
 
-          <p className="word-middle-hr"><span>or</span></p>
+        <p className="word-middle-hr"><span>or</span></p>
 
-          <div className="payasguest-btn-container">
-            <button className='payasguest-btn' onClick={() => {alert("Bring user to Payment Screen")}}>
-              Pay as Guest
-            </button>
-          </div>
-        </CheckoutPopup>
-      )}
+        <div className="payasguest-btn-container">
+          <button className='payasguest-btn' onClick={() => { navigate('/makepayment') }}>
+            Pay as Guest
+          </button>
+        </div>
+      </CheckoutPopup>
     </aside>
   );
 }

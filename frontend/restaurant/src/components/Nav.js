@@ -1,9 +1,8 @@
-import React, { useContext } from "react";
-import { Link,useNavigate  } from "react-router-dom";
-import { CartContext } from '../App';
+import React, { useContext, useEffect, useState } from "react";
+import { Link, useNavigate  } from "react-router-dom";
+import { CartContext } from '../helpers/CartContext';
 import "./components-styles/style.css";
 import axios from "axios";
-import { useState, useEffect } from "react";
 import { AuthContext } from "../helpers/AuthContext";
 
 
@@ -82,7 +81,7 @@ function Nav() {
         </ul>
 
         {/* -- Click on Cart Icon bring user to Menu Page */}
-        <Link to="/menu">
+        <Link to="/menu" className='cart-btn-link'>
           <li className='cart-btn-container'>
             <button className="cart-btn" onClick={() => toggleCartClicked()}>
               <img className="cart-btn-img" src={require('../assets/cart-icons8-64.png')} alt="Symbol Icon Cart" width={40} height={40} />

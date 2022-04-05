@@ -5,3 +5,4 @@ package-lock.json
 
 # Ignore MacOS System Metadata File
 .DS_Store
+backend/config/config.json

@@ -59,7 +59,7 @@ function Login() {
                 </div>
                 <div className='signup-link'>
                   Not a member? <Link to='/signup'>Create an account</Link><br/>
-                  Forgot your password? <Link to='/changepassword'>Reset password</Link>
+                  Forgot your password? <Link to='/forgotpassword'>Reset password</Link>
                 </div>
               </div>
           </div>

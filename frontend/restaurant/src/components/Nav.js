@@ -14,7 +14,7 @@ function Nav() {
     axios
       .get("http://localhost:3001/auth/auth", {
         headers: {
-          accessToken: sessionStorage.getItem("accessToken"),
+          accessToken: localStorage.getItem("accessToken"),
         },
       })
       .then((response) => {
@@ -33,7 +33,7 @@ function Nav() {
     
   };
   const logout = () => {
-    sessionStorage.removeItem("accessToken");
+    localStorage.removeItem("accessToken");
     navigate("/");
     setAuthState(false);
   };

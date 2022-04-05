@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import {useNavigate } from "react-router-dom";
 import { Formik, Form, Field, ErrorMessage } from "formik";
+import { Link, useNavigate } from "react-router-dom";
 import axios from "axios";
 function Profile() {
   
@@ -8,12 +9,12 @@ function Profile() {
   const [username, setUsername] = useState("");
   const [name, setname] = useState("");
   const [last_name, setLast_name] = useState("");
-
+  const [order, setorder] = useState([]);
   useEffect(() => {
     axios
       .get(`http://localhost:3001/auth/basicinfo`, {
         headers: {
-          accessToken: sessionStorage.getItem("accessToken"),
+          accessToken: localStorage.getItem("accessToken"),
         },
       })
       .then((response) => {
@@ -21,6 +22,10 @@ function Profile() {
         setname(response.data.name);
         setLast_name(response.data.last_name);
       });
+      axios.get(`http://localhost:3001/orders`).then((response) => {
+      setorder(response.data);
+      console.log(response.data)
+    });
   }, []);
 
   return (
@@ -44,6 +49,26 @@ function Profile() {
       </div>
       <div className="OrderHistoryColumn"> 
           <h1>My Order History</h1>
+          <h2>Order History</h2>
+      <table className="table">
+        <thead>
+          <tr>
+            <th>ID</th>
+            <th>Total</th>
+            <th>Paid</th>
+            <th>Date</th>
+          </tr>
+        </thead>
+      </table>
+        {order.map((value,key) =>{
+          return <div> 
+           <td> {value.id} </td>
+           <td> {value.price_total} </td>
+           <td> {value.paid} </td>
+           <td> {value.createdAt.substring(0,10)} </td>
+           </div>
+        })}
+     
       </div>
       <div className="PhoImageColumn"> 
         <h1>The Most Un-Pho-Gettable Restaurant!</h1>

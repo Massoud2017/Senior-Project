@@ -458,9 +458,10 @@ h4{
     text-decoration: underline;
 }
 
-.login-btn,.Prof_logoutContainer {
+.login-btn,.prof-button, .logout-button {
     font-family: 'Lexend', sans-serif;
     color: rgb(31, 61, 3);
+    padding-top: 15px;
     margin: 0.75rem;
     cursor: pointer;
     display: inline-flex;
@@ -477,8 +478,9 @@ h4{
     color: black;
 }
 
-.login-btn-signup, .Prof_logoutContainer {
+.login-btn-signup {
     font-family: 'Lexend', sans-serif;
+    padding-top: 15px;
     color: rgb(31, 61, 3);
     margin: 0.25rem;
     cursor: pointer;
@@ -503,7 +505,7 @@ h4{
 
 
 /* ------------------------ */
-/* -- For Checout Popup    */
+/* -- For Checkout Popup    */
 /* ---------------------- */
 
 .chekoutpopup {
@@ -579,3 +581,103 @@ h4{
   cursor: pointer;
   outline: none;
 }
+
+/* ------------------------ */
+/* -- For Profile Page    */
+/* ---------------------- */
+
+.profilePageContainer {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 100%;
+    padding: 1.5rem;
+    background-color: black;
+}
+
+.personImageColumn{
+    width: 100px;
+    margin: -2rem;
+    margin-right: -3rem;
+    padding-left: 0.5rem;
+}
+
+.basicInfoColumn {
+    flex: 1 2 0;
+    margin-left: 2.3rem;
+}
+
+.basicInfoColumn h3{
+    font-size: 2.5rem;
+    color: yellow;
+    cursor: default;
+    margin-bottom: 3rem;
+}
+
+.basicInfoColumn h1{
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.1rem;
+    color: white;
+
+}
+
+.OrderHistoryColumn {
+    flex: 1 1 0;
+}
+
+.OrderHistoryColumn h1 {
+    color: white;
+    font-size: 2rem;
+    text-align: left;
+}
+
+.PhoImageColumn{
+    flex: 1 1 0;
+    background-size: 100% auto;
+    text-align: center;
+    color: white;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1rem;
+    padding-top: 20px;
+}
+
+
+.changePSWDButon, .saveChangesButton{
+    margin-top: 15px;
+    border-radius: 20px;
+    height: 1.5rem;
+    width: 12rem;
+    background-color: #404040;
+    color: white;
+    font-size: 1rem;
+    font-family: 'Montserrat', sans-serif;
+    cursor: pointer;
+}
+
+.changePSWDButon:hover, .saveChangesButton:hover{
+    background-color: #696666;
+}
+
+/* -------------------------------- */
+/*      For Change Password Page    */
+/* -------------------------------- */
+
+.main-content{
+    color: white;
+    background-color: black;
+    padding: 1.25rem;
+}
+
+.main-content h3{
+    font-size: 2.25rem;
+    color: white;
+    cursor: default;
+}
+
+input[type=text] {
+    width: auto;
+    font-size: 1.2rem;
+    padding: 4px 18px;
+    margin: 6px 0;
+    box-sizing: border-box;
+  }

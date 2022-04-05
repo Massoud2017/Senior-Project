@@ -25,12 +25,15 @@ function Profile() {
 
   return (
     <div className="profilePageContainer">
-      <div className="basicInfo">    
+      <div className='personImageColumn'>
+        <img src={require('../assets/PersonOutline.PNG')} alt="FoodImages" width="120rem"/>
+      </div>
+      <div className="basicInfoColumn">    
         {" "}
+        <h3>Hello, {name}</h3>
+        <h1> Full Name: {name} {last_name} </h1>
         <h1> Email: {username} </h1>
-        <h1> Name: {name} </h1>
-        <h1> Last Name: {last_name} </h1>
-        <button
+        <button className="changePSWDButon"
           onClick={() => {
             navigate("/changepassword");
           }}
@@ -39,11 +42,12 @@ function Profile() {
           Change My Password
         </button>
       </div>
-      <div className="order-history-container"> 
-          <h1>Order History</h1>
+      <div className="OrderHistoryColumn"> 
+          <h1>My Order History</h1>
       </div>
-      <div className="point-container"> 
-          <h1></h1>  
+      <div className="PhoImageColumn"> 
+        <h1>The Most Un-Pho-Gettable Restaurant!</h1>
+        <img src={require('../assets/FoodImages.PNG')} alt="FoodImages" width="340px" />
       </div>
       
     </div>

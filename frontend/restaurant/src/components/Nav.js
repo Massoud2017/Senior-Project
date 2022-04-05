@@ -113,11 +113,8 @@ function Nav() {
         
         ) : (
         <div className="Prof_logoutContainer">
-
-        
-        <button onClick={profile_button}> profile</button>
-        <button onClick={logout}> Logout</button>
-
+          <button className='prof-button' onClick={profile_button}> Profile</button>
+          <button className='logout-button' onClick={logout}> Sign Out</button>
         </div>
         
         )}

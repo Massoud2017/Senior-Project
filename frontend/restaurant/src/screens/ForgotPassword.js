@@ -19,7 +19,7 @@ function ForgotPassword() {
     });
 
     const onSubmit = (data) => {
-        axios.post("http://localhost:3001/auth", data).then(() => {
+        axios.post("http://localhost:3001/verifyuser", data).then(() => {
             console.log(data);
         });
     };
@@ -30,21 +30,12 @@ function ForgotPassword() {
                 initialValues={initialValues}
                 onSubmit={onSubmit}
                 validationSchema={validationSchema}
-            >
+            >   
                 <Form className="formContainer">
                     <h1>Verify your account</h1>
                     <br />
                     <p>Please verify your personal information first...</p>
-                    
-                    <label>Email:</label>
-                    <ErrorMessage name="username" component="span" />
-                    <Field
-                        autoComplete="off"
-                        id="input_email"
-                        type="email"
-                        name="username"
-                        placeholder="Enter your Email"
-                    />
+
                     <label>First name: </label>
                     <ErrorMessage name="name" component="span" />
                     <Field
@@ -60,6 +51,15 @@ function ForgotPassword() {
                         id="last_name_input"
                         name="last_name"
                         placeholder="(Ex. Smith)"
+                    />
+                    <label>Email:</label>
+                    <ErrorMessage name="username" component="span" />
+                    <Field
+                        autoComplete="off"
+                        id="input_email"
+                        type="email"
+                        name="username"
+                        placeholder="Enter your Email"
                     />
 
                     <Link to="/resetpassword">

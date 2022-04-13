@@ -7,6 +7,9 @@
 /* -- Open Sans - Bold 700 */
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@700&display=swap');
 
+/* -- Cinzel --*/
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@900&display=swap');
+
 
 /* --------------------  */
 /* -- General styles    */
@@ -67,7 +70,8 @@
     font-family: 'Lexend', sans-serif;
     display: inline-flex;
     align-items: center;
-    font-size: 1.3rem;
+    font-size: 1.6rem;
+    font-weight: bold;
     cursor: pointer;
     text-decoration: none;
     color: rgb(31, 61, 3);
@@ -216,11 +220,15 @@ h4{
     }
 }
 
-.about-top-container div, .about-title div, .about-text div{
+.about-top-container div, .about-text div{
     background: #f4efe6;
     padding: 10px;
     text-align: center;
     background-color: white;
+}
+
+.about-title h3{
+    font-size: 3rem;
 }
 
 /* --------------- */

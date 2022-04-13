@@ -55,6 +55,44 @@ router.post("/login", async (req, res) => {
   }
 });
 
+router.get("/verifyuser", async (req, res) => {
+  const { name, last_name, username } = req.body;
+  const user = await Users.findOne({ where: { 
+    name: name, 
+    last_name: last_name,
+    username: username, 
+  } });
+
+  if (!user) {
+    res.json({ error: "User Doesn't Exist." });
+  } else {
+    const accessToken = sign(
+      { name: user.name,
+        last_name: user.last_name,
+        username: user.username },
+      "energyRANDOMsecret"
+    );
+    res.json(accessToken);
+  }
+});
+
+router.get("/resetpasssword", validateToken, async (req, res) => {
+  const { newPassword } = req.body;
+  const accessToken = req.header("accessToken");
+  const payload = decode(accessToken);
+  bcrypt.hash(newPassword, 10).then((hash) => {
+    Users.update(
+      { password: hash },
+      { where: { 
+        name: payload.name,
+        last_name: payload.last_name,
+        username: payload.username, 
+      } }
+    );
+    res.json("RESET SUCCESS");
+  });
+})
+
 router.get("/auth", validateToken, (req, res) => {
   res.json(req.user);
 });

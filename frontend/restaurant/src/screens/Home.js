@@ -2,7 +2,7 @@
 import './components/home-style.css';
 import front from './components/home-front.jpg';
 import interior from './components/home-interior.jpg';
-import food from './components/home-food.jpg';
+import food from './components/home-food.PNG';
 import { Component } from "react";
 
 const textArray = [

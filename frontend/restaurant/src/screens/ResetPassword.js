@@ -16,7 +16,7 @@ function ResetPassword() {
     });
 
     const onSubmit = (data) => {
-        axios.post("http://localhost:3001/auth", data).then(() => {
+        axios.post("http://localhost:3001/resetpassword", data).then(() => {
             console.log(data);
         });
     };

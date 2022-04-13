@@ -19,7 +19,7 @@ function ForgotPassword() {
     });
 
     const onSubmit = (data) => {
-        axios.post("http://localhost:3001/auth", data).then(() => {
+        axios.post("http://localhost:3001/verifyuser", data).then(() => {
             console.log(data);
         });
     };

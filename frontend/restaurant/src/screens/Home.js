@@ -2,14 +2,14 @@
 import './components/home-style.css';
 import front from './components/home-front.jpg';
 import interior from './components/home-interior.jpg';
-import food from './components/home-food.PNG';
+import food from './components/home-food.jpg';
 import { Component } from "react";
 
 const textArray = [
-  "Probably the best Pho I have had yet.",
-  "By far my favorite restaurant for Vietnamese food in Sacramento!",
-  "Pho is purely my addiction.",
-  "The best Pho I've ever had. I couldn't stop eating.",
+  '"Probably the best Pho I have had yet."',
+  '"By far my favorite restaurant for Vietnamese food in Sacramento!"',
+  '"Pho is purely my addiction."',
+  '"The best Pho I\'ve ever had. I couldn\'t stop eating."',
 ];
 
 document.addEventListener("DOMContentLoaded", function (event) {

@@ -1,10 +1,13 @@
-import React, { useEffect, useState } from 'react';
+import React, { useContext, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import CheckoutPopup from './CheckoutPopup';
 import Login from '../screens/Login';
+import { AuthContext } from "../helpers/AuthContext";
 
 function Basket(props) {
   const navigate = useNavigate();
+  //-- Get Context value from AuthContext in index.js
+  const { authState } = useContext(AuthContext);
 
   //-- For calculating prices
   const { cartItems, onAddToCart, onRemoveFromCart } = props;
@@ -17,10 +20,7 @@ function Basket(props) {
   //-- For Checkout Popup
   const [checkoutPopup, setCheckoutPopup] = useState(false);
 
-  //-- To track user's authentication
-  const [hasToken, setHasToken] = useState('');
-
-  //-- Create cartCheckoutInfo object
+  //-- Create cartCheckoutInfo object  
   const cartCheckoutInfo = {
     cartItems: cartItems,
     itemsPrice: itemsPrice,
@@ -28,15 +28,9 @@ function Basket(props) {
     totalPrice: totalPrice
   };
 
-  useEffect(() => {
-    localStorage.getItem('accessToken')
-      ? setHasToken(sessionStorage.getItem('accessToken'))
-      : setHasToken('');
-  }, [hasToken, setHasToken]);
-
   const onCartCheckout = () => {
     localStorage.setItem('cartCheckoutInfo', JSON.stringify(cartCheckoutInfo));
-    if (hasToken) {
+    if (authState) {
       setCheckoutPopup(false);
       navigate('/makepayment');
     } else {
@@ -82,16 +76,13 @@ function Basket(props) {
             {/* <div className="row">
                         <div className="col-2">Shipping Price</div>
                         <div className="col-1 text-right">${shippingPrice.toFixed(2)}</div>
-                    </div> */}
+                </div> */}
             <div className="row">
               <div className="col-2"><strong>Total Price</strong></div>
               <div className="col-1 text-right"><strong>${totalPrice.toFixed(2)}</strong></div>
             </div>
             <hr />
             <div className="row">
-              {/* <button className="add-cart-btn" onClick={() => setCheckoutPopup(true)}>
-                Checkout
-              </button> */}
               <button className="add-cart-btn" onClick={onCartCheckout}>
                 CHECKOUT
               </button>
@@ -102,7 +93,7 @@ function Basket(props) {
 
       {/* -- The Checkout Popup is trigged by clicking on Checkout Button */}
       <CheckoutPopup trigger={checkoutPopup} setTrigger={setCheckoutPopup}>
-        <Login />
+        <Login setCheckoutPopup={setCheckoutPopup} />
 
         <p className="word-middle-hr"><span>or</span></p>
 

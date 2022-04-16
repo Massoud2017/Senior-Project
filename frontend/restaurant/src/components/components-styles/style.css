@@ -593,7 +593,7 @@ h4{
     flex-wrap: wrap;
     width: 100%;
     padding: 1.5rem;
-    background-color: black;
+    background-color: rgb(2, 2, 2);
 }
 
 .personImageColumn{
@@ -626,10 +626,15 @@ h4{
     flex: 1 1 0;
 }
 
-.OrderHistoryColumn h1 {
+.OrderHistoryColumn h1, td,tr {
     color: white;
     font-size: 2rem;
     text-align: left;
+}
+td{
+    padding: 15px 0;
+    text-align: center;
+    border:1px dotted rgb(255, 255, 255);
 }
 
 .PhoImageColumn{

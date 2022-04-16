@@ -14,8 +14,13 @@ function ConfirmPaymentScreen() {
   useEffect(() => {
     try {
       axios.post(
-        'http://localhost:3001/orders',
-        { order_info: JSON.stringify(cartCheckoutInfo), price_total: totalPrice.toString(), paid: 'true' }
+        'http://localhost:3001/orders', 
+        { order_info: JSON.stringify(cartCheckoutInfo), price_total: totalPrice.toString(), paid: 'true' },
+        {
+          headers:{
+            accessToken: localStorage.getItem("accessToken")
+          }
+        }
       ).then((response) => {
         console.log('This order is stored in the database:');
         console.log(response.data);

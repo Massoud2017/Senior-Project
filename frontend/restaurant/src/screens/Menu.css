@@ -99,7 +99,7 @@ h3{
   transition: all .3s ease-in-out;
 }
 
-menubuttons{
+.button-style{
   display: inline-flex;
   flex-direction: column;
   box-sizing: border-box;
@@ -109,7 +109,7 @@ menubuttons{
   margin: 0.8rem 1.05rem;
 }
 
-menubuttons:hover {
+.button-style:hover {
   cursor: pointer;
   color: #037FFF;
 }

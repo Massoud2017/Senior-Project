@@ -6,7 +6,7 @@ function Button({button, filter}) {
             <div className="buttons">
                 {
                     button.map((cat, i)=>{
-                        return <menubuttons type="button" onClick={()=> filter(cat)} >{cat}</menubuttons>
+                        return <div className="button-style" type="button" key={i} onClick={()=> filter(cat)} >{cat}</div>
                     })
                 }
             </div>

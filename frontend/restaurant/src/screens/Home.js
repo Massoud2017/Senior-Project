@@ -6,10 +6,10 @@ import food from './components/home-food.jpg';
 import { Component } from "react";
 
 const textArray = [
-  "Probably the best Pho I have had yet.",
-  "By far my favorite restaurant for Vietnamese food in Sacramento!",
-  "Pho is purely my addiction.",
-  "The best Pho I've ever had. I couldn't stop eating.",
+  '"Probably the best Pho I have had yet."',
+  '"By far my favorite restaurant for Vietnamese food in Sacramento!"',
+  '"Pho is purely my addiction."',
+  '"The best Pho I\'ve ever had. I couldn\'t stop eating."',
 ];
 
 document.addEventListener("DOMContentLoaded", function (event) {

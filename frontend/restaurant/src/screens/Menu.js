@@ -26,7 +26,7 @@ function Menu() {
     setMenuItem(filteredData)
   }
 
-  //-- Get Context value from CartContext in App.js
+  //-- Get Context value from CartContext in index.js
   const { cartItems, onAddToCart, onRemoveFromCart, isCartClicked } = useContext(CartContext);
 
   return (

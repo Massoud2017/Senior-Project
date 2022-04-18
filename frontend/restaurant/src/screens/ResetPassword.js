@@ -22,34 +22,38 @@ function ResetPassword() {
     };
 
     return (
-        <div>
+        <div className="reset-password-page" >
             <Formik
                 initialValues={initialValues}
                 onSubmit={onSubmit}
                 validationSchema={validationSchema}
             >
-                <Form className="formContainer">
-                    <h1>Password Reset</h1>
+                <Form className="formContainerPassword">
+                    <h2>Password Reset</h2>
+        
+                    <div className="formBody">
+                    <p>Please enter and confirm your new password.</p>
 
-                    <label>New Password:</label>
-                    <ErrorMessage name="password" component="span" />
+                    <ErrorMessage name="password" component="span" style={{ color: 'red'}}/>
                     <Field
                         autoComplete="off"
                         type="password"
                         id="input_password"
                         name="password"
-                        placeholder="Your Password..."
+                        placeholder="Enter New Password"
+                        className="input-field-pswd"
                     />
-                    <label>Confirm Password:</label>
-                    <ErrorMessage name="passwordConfirmation" component="span" />
+                    <ErrorMessage name="passwordConfirmation" component="span"/>
                     <Field
                         autoComplete="off"
                         type="password"
                         id="input_confirm"
                         name="passwordConfirmation"
-                        placeholder="Your Password..."
+                        placeholder="Confirm New Password"
+                        className="input-field-pswd"
                     />
-                    <button type="submit">Reset Password</button>
+                    </div>
+                    <button className="login-btn-password" type="submit">Reset Password</button>
                 </Form>
             </Formik>
         </div>

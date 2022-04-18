@@ -1,24 +1,36 @@
 import React, { useState, useEffect, useContext } from 'react';
 import { Link, useNavigate } from "react-router-dom";
 import axios from 'axios';
-import { AuthContext } from "../helpers/AuthContext";
+import { CartContext } from '../helpers/CartContext';
 
 function ConfirmPaymentScreen() {
-  const cartCheckoutInfo = JSON.parse(localStorage.getItem('cartCheckoutInfo'));
-  const { cartItems, itemsPrice, taxPrice, totalPrice } = cartCheckoutInfo;
+  //-- Clear cart badge and basket
+  const { setCartItems, setTotalCartItems } = useContext(CartContext);
 
-  // const cleanUpOps = () => {
-  //   localStorage.removeItem('cartCheckoutInfo');
-  // }
+  const cartCheckoutInfo = JSON.parse(sessionStorage.getItem('cartCheckoutInfo'));
+  const cartItems = cartCheckoutInfo.cartItems;
+  const itemsPrice = cartCheckoutInfo.itemsPrice;
+  const taxPrice = cartCheckoutInfo.taxPrice;
+  const totalPrice = cartCheckoutInfo.totalPrice;
 
   useEffect(() => {
     try {
       axios.post(
-        'http://localhost:3001/orders',
-        { order_info: JSON.stringify(cartCheckoutInfo), price_total: totalPrice.toString(), paid: 'true' }
+        'http://localhost:3001/orders', 
+        { order_info: JSON.stringify(cartCheckoutInfo), price_total: totalPrice.toString(), paid: 'true' },
+        {
+          headers:{
+            accessToken: localStorage.getItem("accessToken")
+          }
+        }
       ).then((response) => {
         console.log('This order is stored in the database:');
         console.log(response.data);
+        localStorage.removeItem('cartCheckoutInfo');
+        localStorage.removeItem('cartItems');
+        localStorage.removeItem('totalCartItems');
+        setCartItems([]);
+        setTotalCartItems(0);
       });
     } catch (err) {
       console.log(err);
@@ -66,9 +78,6 @@ function ConfirmPaymentScreen() {
         <input type="email" placeholder="Enter your Email" />
         <button>Sent Receipt to Email</button>
       </div>
-
-      {/* Clean up operation */}
-      {/* {cleanUpOps()} */}
     </div>
   )
 }

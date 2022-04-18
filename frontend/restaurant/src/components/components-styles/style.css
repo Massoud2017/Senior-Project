@@ -7,6 +7,9 @@
 /* -- Open Sans - Bold 700 */
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@700&display=swap');
 
+/* -- Cinzel --*/
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@900&display=swap');
+
 
 /* --------------------  */
 /* -- General styles    */
@@ -79,7 +82,8 @@
     font-family: 'Lexend', sans-serif;
     display: inline-flex;
     align-items: center;
-    font-size: 1.3rem;
+    font-size: 1.6rem;
+    font-weight: bold;
     cursor: pointer;
     text-decoration: none;
     color: rgb(31, 61, 3);
@@ -224,11 +228,15 @@ h4{
     background: black;   
 }
 
-.about-top-container div, .about-title div, .about-text div{
+.about-top-container div, .about-text div{
     background: #f4efe6;
     padding: 10px;
     text-align: center;
     background-color: white;
+}
+
+.about-title h3{
+    font-size: 3rem;
 }
 
 /* --------------- */
@@ -508,10 +516,6 @@ h4{
     margin-left: 1in;
 }
 
-
-/* ------------------------ */
-/* -- For Checkout Popup    */
-/* ---------------------- */
 /* ------------------------- */
 /* -- For Checkout Popup    */
 /* ----------------------- */
@@ -600,7 +604,7 @@ h4{
     flex-wrap: wrap;
     width: 100%;
     padding: 1.5rem;
-    background-color: black;
+    background-color: rgb(2, 2, 2);
 }
 
 .personImageColumn{
@@ -633,10 +637,15 @@ h4{
     flex: 1 1 0;
 }
 
-.OrderHistoryColumn h1 {
+.OrderHistoryColumn h1, td,tr {
     color: white;
     font-size: 2rem;
     text-align: left;
+}
+td{
+    padding: 15px 0;
+    text-align: center;
+    border:1px dotted rgb(255, 255, 255);
 }
 
 .PhoImageColumn{

@@ -1,13 +1,13 @@
-import React , {useState, useEffect,useContext} from 'react';
+import React , { useContext, useEffect, useState } from 'react';
 import { Link, useNavigate } from "react-router-dom";
 import axios from 'axios';
 import GoogleLoginButton from './GoogleLogin.js';
 import { AuthContext } from "../helpers/AuthContext";
-function Login() {
+function Login(props) {
   const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
   const { setAuthState } = useContext(AuthContext);
-	let navigate = useNavigate();
+	const navigate = useNavigate();
 
   const login = () => {
 		const data = { username: username, password: password };
@@ -16,10 +16,11 @@ function Login() {
 				alert(response.data.error);
 			} else {
 				localStorage.setItem('accessToken', response.data);
-        //-- When logged in, redirect to homepage
-        navigate('/');
+        //-- When logged in, redirect to menu page
+        navigate('/menu');
         // window.location.reload();
         setAuthState(true);
+        props.setCheckoutPopup(false);
 			}
       
 		});
@@ -54,11 +55,11 @@ function Login() {
                   />
                 </div>
                   <button className='form-login-btn' onClick={login}>Login</button>
-                <div className='g-signin'>
+                <div className='g-signin google-login-btn'>
                   <GoogleLoginButton/>
                 </div>
                 <div className='signup-link'>
-                  Not a member? <Link to='/signup'>Create an account</Link><br/>
+                  Not a member yet? <Link to='/signup'>Create an account</Link><br/>
                   Forgot your password? <Link to='/forgotpassword'>Reset password</Link>
                 </div>
               </div>

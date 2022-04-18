@@ -1,17 +1,18 @@
 import React, { useContext, useEffect, useState } from "react";
 import { Link, useNavigate  } from "react-router-dom";
 import { CartContext } from '../helpers/CartContext';
-import "./components-styles/style.css";
-import axios from "axios";
 import { AuthContext } from "../helpers/AuthContext";
 import "../helpers/script";
-
-
+import "./components-styles/style.css";
+import axios from "axios";
 
 function Nav() {
-  let sideMenuClicked = useState(false);
-  let navigate = useNavigate();
-  const [authState, setAuthState] = useState(false);
+  const navigate = useNavigate();
+  //-- Get Context value from CartContext in App.js
+  const { totalCartItems, toggleCartClicked} = useContext(CartContext);
+  //-- Get Context value from AuthContext in index.js
+  const { authState, setAuthState } = useContext(AuthContext);
+
   useEffect(() => {
     axios
       .get("http://localhost:3001/auth/auth", {
@@ -27,23 +28,20 @@ function Nav() {
         }
       });
   }, []);
-  //-- Get Context value from CartContext in App.js
-  const { totalCartItems, toggleCartClicked} = useContext(CartContext);
-
+  
   const profile_button = () => {
     navigate("/profile");
     
   };
+
   const logout = () => {
     localStorage.removeItem("accessToken");
     navigate("/");
     setAuthState(false);
   };
   
-
   return (
     <div className="nav">
-      <AuthContext.Provider value={{ authState, setAuthState }}>
       <nav>
         <Link to="/">
           <li>
@@ -51,7 +49,6 @@ function Nav() {
               <img src={require('../assets/PhoRuLogo.png')} alt="Pho Ru" width={85} height={70} />
             </button>
           </li>
-
         </Link>
 
         <Link to="/">
@@ -124,7 +121,6 @@ function Nav() {
         )}
         
       </nav>
-      </AuthContext.Provider>
       <script src = "script.js"></script>
     </div>
   );

@@ -24,10 +24,10 @@ const validateToken = (req, res, next) => {
   try {
     //-- compare with the secret string
     const validToken = verify(accessToken, 'energyRANDOMsecret');
-
-    if (validToken) {
+    
+      req.user = validToken;
       return next();
-    }
+    
   } catch (err) {
     return res.json({ error: err });
   }

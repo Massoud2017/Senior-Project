@@ -1,15 +1,18 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import { CartContextProvider } from './helpers/CartContext';
+import { AuthContextProvider } from './helpers/AuthContext';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 
 ReactDOM.render(
   <React.StrictMode>
-    <CartContextProvider>
-      <App />
-    </CartContextProvider>
+    <AuthContextProvider>
+      <CartContextProvider>  
+        <App />
+      </CartContextProvider>
+    </AuthContextProvider>
   </React.StrictMode>,
   document.getElementById('root')
 );

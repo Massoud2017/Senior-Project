@@ -21,11 +21,11 @@ module.exports = (sequelize, DataTypes) => {
 	});
 	
   //-- Adding foreign key constraint: a user can has many orders
-  // Users.associate = (models) => {
-  //   Users.hasMany(models.Orders, {
-  //     onDelete: 'cascade'
-  //   });
-  // };
+  Users.associate = (models) => {
+     Users.hasMany(models.Orders, {
+	     onDelete: 'cascade'
+    });
+ };
 
 	return Users;
 };

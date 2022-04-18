@@ -1,4 +1,4 @@
-import { createContext, useState } from 'react';
+import { createContext, useEffect, useState } from 'react';
 
 
 //-- Create a Context for Cart
@@ -6,9 +6,22 @@ export const CartContext = createContext();
 
 export const CartContextProvider = (props) => {
   //-- Tracking states For Basket: tracking Cart's items
-  const [cartItems, setCartItems] = useState([]);
-  const [totalCartItems, setTotalCartItems] = useState(0);
+  const [cartItems, setCartItems] = useState(
+    localStorage.getItem('cartItems')
+      ? JSON.parse(localStorage.getItem('cartItems'))
+      : []
+  );
+  const [totalCartItems, setTotalCartItems] = useState(
+    localStorage.getItem('totalCartItems')
+      ? parseInt(localStorage.getItem('totalCartItems'))
+      : 0
+  );
   const [isCartClicked, setIsCartClicked] = useState(false);
+
+  useEffect(() => {
+    localStorage.setItem('cartItems', JSON.stringify(cartItems));
+    localStorage.setItem('totalCartItems', totalCartItems);
+  }, [cartItems, totalCartItems]);
 
   //-- Functions for Cart
   const onAddToCart = (item) => {
@@ -50,7 +63,9 @@ export const CartContextProvider = (props) => {
     isCartClicked: isCartClicked,
     onAddToCart: onAddToCart,
     onRemoveFromCart: onRemoveFromCart,
-    toggleCartClicked: toggleCartClicked
+    toggleCartClicked: toggleCartClicked,
+    setCartItems: setCartItems,
+    setTotalCartItems: setTotalCartItems
   }
 
   return <CartContext.Provider value={value}>{props.children}</CartContext.Provider>

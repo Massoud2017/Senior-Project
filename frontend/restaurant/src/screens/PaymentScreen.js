@@ -7,12 +7,8 @@ function PaymentScreen() {
   const navigate = useNavigate();
 
   const cartCheckoutInfo = JSON.parse(localStorage.getItem('cartCheckoutInfo'));
-  const { cartItems, itemsPrice, taxPrice, totalPrice } = cartCheckoutInfo;
 
-  console.log(cartItems);
-  console.log('itemsPrice', itemsPrice);
-  console.log(taxPrice);
-  console.log(totalPrice);
+  const { cartItems, itemsPrice, taxPrice, totalPrice } = cartCheckoutInfo;
 
   const [paymentMethod, setPaymentMethod] = useState('square');
 
@@ -21,6 +17,9 @@ function PaymentScreen() {
   }
 
   const onMakePayment = () => {
+    //-- Store cartCheckoutInfo to sessionStorage so that when user accidentally refresh
+    //-- the confirmation page they won't loose the confirmation info
+    sessionStorage.setItem('cartCheckoutInfo', JSON.stringify(cartCheckoutInfo));
     navigate('/confirmpayment');
   }
 
@@ -39,14 +38,14 @@ function PaymentScreen() {
             onChange={onPaymentMethodSelect}
           />
           <label> Square </label>
-          <input
+          {/* <input
             type="radio"
             name="paymentMethod"
             value="paypal"
             checked={paymentMethod === 'paypal'}
             onChange={onPaymentMethodSelect}
           />
-          <label> Paypal </label>
+          <label> Paypal </label> */}
         </div>
       </div>
 
@@ -81,7 +80,7 @@ function PaymentScreen() {
 
       <div>
         { paymentMethod === "square" && <button onClick={onMakePayment}>Square Checkout Button</button> }
-        { paymentMethod === "paypal" && <button onClick={onMakePayment}>Paypal Checkout Button</button> }
+        {/* { paymentMethod === "paypal" && <button onClick={onMakePayment}>Paypal Checkout Button</button> } */}
       </div>
     </div>
   )

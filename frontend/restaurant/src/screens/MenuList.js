@@ -28,7 +28,7 @@ const MenuList = [
         id: '1',
         type: 'Appetizers and Salads',
         name: 'Ru`s Special Trio',
-        vietnamese_name: 'Tôm Au Việt',
+        vietnamese_name: 'Tôm Âu Việt',
         price: 9.95, 
         image: A1,
     },

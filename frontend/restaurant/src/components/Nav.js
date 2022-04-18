@@ -4,12 +4,14 @@ import { CartContext } from '../helpers/CartContext';
 import "./components-styles/style.css";
 import axios from "axios";
 import { AuthContext } from "../helpers/AuthContext";
+import "../helpers/script";
+
 
 
 function Nav() {
+  let sideMenuClicked = useState(false);
   let navigate = useNavigate();
   const [authState, setAuthState] = useState(false);
-
   useEffect(() => {
     axios
       .get("http://localhost:3001/auth/auth", {
@@ -27,7 +29,7 @@ function Nav() {
   }, []);
   //-- Get Context value from CartContext in App.js
   const { totalCartItems, toggleCartClicked} = useContext(CartContext);
-  
+
   const profile_button = () => {
     navigate("/profile");
     
@@ -43,7 +45,6 @@ function Nav() {
     <div className="nav">
       <AuthContext.Provider value={{ authState, setAuthState }}>
       <nav>
-      
         <Link to="/">
           <li>
             <button className="logo">
@@ -60,8 +61,6 @@ function Nav() {
             </button>
           </li>
         </Link>
-
-
         <ul className="nav-links">
         <Link to="/about">
             <li>
@@ -108,6 +107,11 @@ function Nav() {
             <button className="login-btn-signup">Register</button>
           </li>
         </Link>
+        <div className="hamburger">
+          <span className="bar"></span>
+          <span className="bar"></span>
+          <span className="bar"></span>
+        </div>
         </>
         
         ) : (
@@ -115,14 +119,16 @@ function Nav() {
           <button className='prof-button' onClick={profile_button}> Profile</button>
           <button className='logout-button' onClick={logout}> Sign Out</button>
         </div>
+
         
         )}
         
       </nav>
       </AuthContext.Provider>
+      <script src = "script.js"></script>
     </div>
-    
   );
 }
 
 export default Nav;
+

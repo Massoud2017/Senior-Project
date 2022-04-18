@@ -146,11 +146,11 @@ buttons{
   border: none;
 }
 
-@media screen and (max-width: 820px){
-  .item{
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-  }
+ @media screen and (max-width: 820px){ 
+   .item{ 
+     display: grid; 
+     grid-template-columns: repeat(2, 1fr); 
+   } 
   
-}
+ } 
 

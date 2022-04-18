@@ -1,3 +1,4 @@
+//This file is meant to help the side menu function while on mobile devices
 const hamburger = document.querySelector(".hamburger");
 const navMenu = document.querySelector(".nav-links");
 
@@ -9,4 +10,5 @@ hamburger.addEventListener("click", () => {
 document.querySelectorAll(".nav-links").forEach(n => n.addEventListener("click", () =>{
     hamburger.classList.remove("active");
     navMenu.classList.remove("active");
+ 
 }))

@@ -14,7 +14,7 @@
 /* --------------------  */
 /* -- General styles    */
 /* ------------------- */
-@media(min-width: 600px){
+@media(min-width: 850px){
     .row {
         display: flex;
         justify-content: space-between;
@@ -52,19 +52,6 @@
         margin-top: 0.5rem;
         border-radius: 0.5rem;
     }
-}
-.hamburger{
-    display: none;
-    cursor: pointer;
-}
-.bar{
-    display: none;
-    width: 25px;
-    height: 3px;
-    margin: 5px auto;
-    -webkit-transition: all 0.3s ease-in-out;
-    transition: all 0.3s ease-in-out;
-    background-color: black;
 }
 /* -------------------------- */
 /* -- Specific components    */
@@ -736,12 +723,9 @@ input[type=text] {
         background-color: #080807;
         border: none;
     }
-    /*nav ul{
-        flex-direction: column;
-        text-align: center;
-    }*/
     .hamburger{
-        display: block;
+        display:block;
+        flex-wrap: wrap;
     }
     .bar{
         display: block;
@@ -752,14 +736,17 @@ input[type=text] {
         transition: all 0.3s ease-in-out;
         background-color: black;
     }
-    .hamburger.active .bar:nth-child(2){
-        opacity: 0;
-    }
     .hamburger.active .bar:nth-child(1){
-        transform: translate(8px) rotate(45deg);
+        opacity: 0;
+        margin: 0px auto;
+    }
+    .hamburger.active .bar:nth-child(2){
+        transform: translate(0px) rotate(45deg);
+        margin: 0px auto;
     }
     .hamburger.active .bar:nth-child(3){
-        transform: translate(-8px) rotate(-45deg);
+        transform: translate(0px) rotate(-45deg);
+        margin: 0px auto;
     }
     .nav-links{
         position:fixed;
@@ -767,16 +754,15 @@ input[type=text] {
         top: 70 px;
         gap: 0;
         flex-direction: column;
-        background-color: #080807;
+        background-color: #FEB139;
         width: 100%;
+        height:auto;
         text-align: center;
         transition:0.3s;
     }
-    .contact-btn,.about-btn,.login-btn,.login-btn-signup,.menu-1,.contact-btn{
-        margin:16 px 0;
-    }
     .nav-links.active{
-        Left: 0;
+        Left: 0%;
+        width: 100%;
     }
 
 }

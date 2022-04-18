@@ -2,9 +2,10 @@ import React, { useContext, useEffect, useState } from "react";
 import { Link, useNavigate  } from "react-router-dom";
 import { CartContext } from '../helpers/CartContext';
 import { AuthContext } from "../helpers/AuthContext";
-import "../helpers/script";
 import "./components-styles/style.css";
 import axios from "axios";
+//import "../helpers/script";
+
 
 function Nav() {
   const navigate = useNavigate();
@@ -104,11 +105,7 @@ function Nav() {
             <button className="login-btn-signup">Register</button>
           </li>
         </Link>
-        <div className="hamburger">
-          <span className="bar"></span>
-          <span className="bar"></span>
-          <span className="bar"></span>
-        </div>
+
         </>
         
         ) : (
@@ -117,11 +114,13 @@ function Nav() {
           <button className='logout-button' onClick={logout}> Sign Out</button>
         </div>
 
-        
         )}
-        
+        <div className="hamburger">
+          <span className="bar"></span>
+          <span className="bar"></span>
+          <span className="bar"></span>
+        </div>
       </nav>
-      <script src = "script.js"></script>
     </div>
   );
 }

@@ -4,6 +4,8 @@ import { CartContext } from '../helpers/CartContext';
 import { AuthContext } from "../helpers/AuthContext";
 import "./components-styles/style.css";
 import axios from "axios";
+//import "../helpers/script";
+
 
 function Nav() {
   const navigate = useNavigate();
@@ -42,7 +44,6 @@ function Nav() {
   return (
     <div className="nav">
       <nav>
-      
         <Link to="/">
           <li>
             <button className="logo">
@@ -58,8 +59,6 @@ function Nav() {
             </button>
           </li>
         </Link>
-
-
         <ul className="nav-links">
         <Link to="/about">
             <li>
@@ -106,6 +105,7 @@ function Nav() {
             <button className="login-btn-signup">Register</button>
           </li>
         </Link>
+
         </>
         
         ) : (
@@ -113,13 +113,17 @@ function Nav() {
           <button className='prof-button' onClick={profile_button}> Profile</button>
           <button className='logout-button' onClick={logout}> Sign Out</button>
         </div>
-        
+
         )}
-        
+        <div className="hamburger">
+          <span className="bar"></span>
+          <span className="bar"></span>
+          <span className="bar"></span>
+        </div>
       </nav>
     </div>
-    
   );
 }
 
 export default Nav;
+

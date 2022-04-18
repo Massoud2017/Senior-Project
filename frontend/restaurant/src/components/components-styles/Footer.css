@@ -1,6 +1,6 @@
 .footer {
     width: 100%;
-    height: 200%;
+    height:auto;
     background: #FEB139; 
     display: flex;
     justify-content: center;

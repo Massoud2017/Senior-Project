@@ -14,46 +14,45 @@
 /* --------------------  */
 /* -- General styles    */
 /* ------------------- */
-@media (min-width: 600px){
-.row {
-    display: flex;
-    justify-content: space-between;
-}
+@media(min-width: 850px){
+    .row {
+        display: flex;
+        justify-content: space-between;
+    }
 
-.row.center {
-    align-items: center;
-}
+    .row.center {
+        align-items: center;
+    }
 
-.col-1 {
-    flex: 1;
-    color: white;
-    font-family: 'Lexend', sans-serif;
-}
-  
-.col-2 {
-    flex: 3;
-    margin-top: 0.8rem;
-    margin-bottom: 0.8rem;
-}
+    .col-1 {
+        flex: 1;
+        color: white;
+        font-family: 'Lexend', sans-serif;
+    }
+    
+    .col-2 {
+        flex: 3;
+        margin-top: 0.8rem;
+        margin-bottom: 0.8rem;
+    }
 
-.col-3 {
-    flex: 1;
-    background-color: black;
-    flex-direction: column;
-    display: flex;
-    color: white;
-    font-family: 'Lexend', sans-serif;
-}
+    .col-3 {
+        flex: 1;
+        background-color: black;
+        flex-direction: column;
+        display: flex;
+        color: white;
+        font-family: 'Lexend', sans-serif;
+    }
 
 
-.block {
-    background-color: black;
-    padding: 1rem;
-    margin-top: 0.5rem;
-    border-radius: 0.5rem;
+    .block {
+        background-color: black;
+        padding: 1rem;
+        margin-top: 0.5rem;
+        border-radius: 0.5rem;
+    }
 }
-}
-
 /* -------------------------- */
 /* -- Specific components    */
 /* ------------------------ */
@@ -80,7 +79,6 @@
     border: none;
   }
 
-@media (min-width: 850px){
   .contact{
     font-family: 'Lexend', sans-serif;
     display: flex;
@@ -94,7 +92,7 @@
     background-color: #080807;
     border: none;
   }
-}
+
   h2 {
     font-size: 1.6rem;
     margin-top: 0.2em;
@@ -181,43 +179,40 @@ h4{
 }
 
 /* ---------------- */
-/* -- For About    */
+/*    For About    */
 /* -------------- */
-@media(min-width:800px){
-    .about-top-container{
-        display: flex;
-        justify-content: space-between;
-        flex-wrap: wrap;
-        padding-top: 2%;
-        padding-left: 2%;
-        padding-right: 2%;
-        padding-bottom: 2%;
-        background:black; 
-        text-align:center;
-        font-family: 'Lexend', sans-serif;
-    }
+.about-top-container{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding-top: 2%;
+    padding-left: 2%;
+    padding-right: 2%;
+    padding-bottom: 2%;
+    background:black; 
+    text-align:center;
+    font-family: 'Lexend', sans-serif;
+}
     
-    .about-title{
-        text-align:center;
-        font-size: 30px;
-        padding-bottom: 1%;
-    }
-    .about-text{
-        text-align: center;
-        font-size: 25px;
-        padding-top: 1%;
-    }
-    .about-bottom-container{
-        display: flex;
-        justify-content: space-around;
-        /*flex-wrap: wrap;*/
-        padding-top: 2%;
-        padding-left: 2%;
-        padding-right: 2%;
-        padding-bottom: 2%;
-        background: black;   
-    
-    }
+.about-title{
+    text-align:center;
+    font-size: 30px;
+    padding-bottom: 1%;
+}
+.about-text{
+    text-align: center;
+    font-size: 25px;
+    padding-top: 1%;
+}
+.about-bottom-container{
+    display: flex;
+    justify-content: space-around;
+    /*flex-wrap: wrap;*/
+    padding-top: 2%;
+    padding-left: 2%;
+    padding-right: 2%;
+    padding-bottom: 2%;
+    background: black;   
 }
 
 .about-top-container div, .about-text div{
@@ -331,7 +326,6 @@ h4{
 .checkout-button:hover {
     background-color: rgb(0, 128, 255);
 }
-
 
 /* ---------------- */
 /* -- For Login    */
@@ -702,3 +696,73 @@ input[type=text] {
 /* ------------------------------- */
 /* -- For ConfirmPaymentScreen    */
 /* ----------------------------- */
+
+
+/* ------------------------------- */
+/* -- For Mobile and Tablet Devices    */
+/* ----------------------------- */
+@media screen and (max-width: 820px){
+    .about-bottom-container{
+        background: #080807;
+        text-align: center;
+        flex-wrap: wrap;
+        padding-top: 2%;
+        padding-left: 2%;
+        padding-right: 2%;
+        padding-bottom: 2%;
+    }
+    .contact{
+        font-family: 'Lexend', sans-serif;
+        display: flex;
+        flex-direction: column;
+        align-items: left;
+        padding: 15px 50px;
+        text-decoration: none;
+        outline: none;
+        color: #fff;
+        background-color: #080807;
+        border: none;
+    }
+    .hamburger{
+        display:block;
+        flex-wrap: wrap;
+    }
+    .bar{
+        display: block;
+        width: 25px;
+        height: 3px;
+        margin: 5px auto;
+        -webkit-transition: all 0.3s ease-in-out;
+        transition: all 0.3s ease-in-out;
+        background-color: black;
+    }
+    .hamburger.active .bar:nth-child(1){
+        opacity: 0;
+        margin: 0px auto;
+    }
+    .hamburger.active .bar:nth-child(2){
+        transform: translate(0px) rotate(45deg);
+        margin: 0px auto;
+    }
+    .hamburger.active .bar:nth-child(3){
+        transform: translate(0px) rotate(-45deg);
+        margin: 0px auto;
+    }
+    .nav-links{
+        position:fixed;
+        left: -100%;
+        top: 70 px;
+        gap: 0;
+        flex-direction: column;
+        background-color: #FEB139;
+        width: 100%;
+        height:auto;
+        text-align: center;
+        transition:0.3s;
+    }
+    .nav-links.active{
+        Left: 0%;
+        width: 100%;
+    }
+
+}

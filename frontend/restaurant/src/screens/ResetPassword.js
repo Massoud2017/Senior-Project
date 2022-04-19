@@ -1,10 +1,14 @@
 import React from "react";
+import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 import { Formik, Form, Field, ErrorMessage } from "formik";
 import * as Yup from "yup";
 import axios from "axios";
 import './signup.css'
 
 function ResetPassword() {
+    let navigate = useNavigate();
+
     const initialValues = {
         password: "",
         passwordConfirmation: "",
@@ -14,26 +18,61 @@ function ResetPassword() {
         password: Yup.string().min(4).max(20).required(),
         passwordConfirmation: Yup.string().oneOf([Yup.ref('password'), null], 'Passwords must match')
     });
+    
+    const newPassword = useState("");
 
-    const onSubmit = (data) => {
-        axios.post("http://localhost:3001/resetpassword", data).then(() => {
-            console.log(data);
+    const resetPassword = (data) => {
+        axios.put(
+            "http://localhost:3001/resetpassword/reset",
+            data,
+            {
+                headers: {
+                    resetToken: sessionStorage.getItem("resetToken"),
+                },
+            }
+        ).then((response) => {
+            if (response.data.error) {
+                alert(response.data.error);
+            } else {
+                alert("Your password has been changed.");
+                navigate('/');
+            }
         });
-    };
+  };
 
     return (
         <div className="reset-password-page" >
             <Formik
                 initialValues={initialValues}
-                onSubmit={onSubmit}
+                onSubmit={resetPassword}
                 validationSchema={validationSchema}
             >
                 <Form className="formContainerPassword">
                     <h2>Password Reset</h2>
         
                     <div className="formBody">
+                    
+                    <p>Please answer the following security questions.</p>
+                    <h1>Question 1</h1>
+                    <ErrorMessage name="security_answer_1" component="span" style={{ color: 'red'}} />
+                    <Field
+                        autoComplete="off"
+                        id="security_question_1"
+                        name="security_question_1"
+                        placeholder="Answer 1"
+                        className="input-field-pswd"
+                    />
+                    <h1>Question 2</h1>
+                    <ErrorMessage name="security_answer_2" component="span" style={{ color: 'red'}} />
+                    <Field
+                        autoComplete="off"
+                        id="security_question_2"
+                        name="security_question_2"
+                        placeholder="Answer 2"
+                        className="input-field-pswd"
+                    />
+                    
                     <p>Please enter and confirm your new password.</p>
-
                     <ErrorMessage name="password" component="span" style={{ color: 'red'}}/>
                     <Field
                         autoComplete="off"

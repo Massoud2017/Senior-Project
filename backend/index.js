@@ -1,6 +1,9 @@
 const express = require('express');
 const app = express(); //-- to make api request 
 const cors = require('cors');
+const usersRouter = require("./routes/Users");
+const ordersRouter = require('./routes/Orders');
+const resetPasswordRouter = require('./routes/ResetPassword');
 
 app.use(express.json());
 app.use(cors());
@@ -8,11 +11,9 @@ app.use(cors());
 //-- import database models from models folder
 const db = require("./models");
 
-const usersRouter = require("./routes/Users");
 app.use("/auth", usersRouter)
-
-const ordersRouter = require('./routes/Orders');
 app.use('/orders', ordersRouter);
+app.use('/resetpassword', resetPasswordRouter);
 
 db.sequelize.sync().then(() => {
     app.listen(3001, () => {

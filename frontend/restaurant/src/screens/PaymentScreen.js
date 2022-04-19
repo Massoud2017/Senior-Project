@@ -2,6 +2,7 @@ import React, { useState, useEffect, useContext } from 'react';
 import { Link, useNavigate } from "react-router-dom";
 import axios from 'axios';
 import { AuthContext } from "../helpers/AuthContext";
+//import "../web-payments-quickstart";
 
 function PaymentScreen() {
   const navigate = useNavigate();
@@ -79,7 +80,7 @@ function PaymentScreen() {
       </div>
 
       <div>
-        { paymentMethod === "square" && <button onClick={onMakePayment}>Square Checkout Button</button> }
+        {paymentMethod === "square" && <button onClick={onMakePayment}>Square Checkout Button</button>}
         {/* { paymentMethod === "paypal" && <button onClick={onMakePayment}>Paypal Checkout Button</button> } */}
       </div>
     </div>

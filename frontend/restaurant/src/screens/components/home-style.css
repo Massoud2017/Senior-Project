@@ -39,6 +39,7 @@ body {
   border-radius: 0.5rem;
   padding: 15rem 39rem;
   height: 100vh;
+  width:100; 
   background-color: rgba(0,0,0,0.5);
 }
 .intro h1 {

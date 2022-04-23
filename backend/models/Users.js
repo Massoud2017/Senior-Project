@@ -18,6 +18,15 @@ module.exports = (sequelize, DataTypes) => {
 			type: DataTypes.STRING,
 			allowNull: false,
 		},
+		question_one: {
+			type: DataTypes.STRING,
+			allowNull: false,
+		},
+		question_two: {
+			type: DataTypes.STRING,
+			allowNull: false,
+		},
+
 	});
 	
   //-- Adding foreign key constraint: a user can has many orders

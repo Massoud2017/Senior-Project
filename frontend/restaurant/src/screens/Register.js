@@ -10,6 +10,8 @@ function Register() {
     name: "",
     last_name: "",
     username: "",
+    question_one: "",
+    question_two:"",
     password: "",
     passwordConfirmation:""
   };
@@ -17,6 +19,8 @@ function Register() {
   const validationSchema = Yup.object().shape({
     name: Yup.string().min(3).max(15).required(),
     last_name: Yup.string().min(3).max(15).required(),
+    question_one: Yup.string().min(3).max(30).required(),
+    question_two: Yup.string().min(3).max(30).required(),
     username: Yup.string().min(3).max(30).required(),
     password: Yup.string().min(4).max(20).required(),
     passwordConfirmation: Yup.string().oneOf([Yup.ref('password'), null], 'Passwords must match')
@@ -58,6 +62,22 @@ function Register() {
             id="last_name_input"
             name="last_name"
             placeholder="Last Name"
+            className = "input-field"
+          />
+          <ErrorMessage name="question_one" component="span" style={{ color: 'red'}}/>
+          <Field
+            autoComplete="off"
+            id="question_one_input"
+            name="question_one"
+            placeholder="What was your first car?"
+            className = "input-field"
+          />
+          <ErrorMessage name="question_two" component="span" style={{ color: 'red'}}/>
+          <Field
+            autoComplete="off"
+            id="question_one_input"
+            name="question_two"
+            placeholder="What is the name of the town where you were born?"
             className = "input-field"
           />
           <ErrorMessage name="username" component="span" style={{ color: 'red'}}/>

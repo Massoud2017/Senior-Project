@@ -3,9 +3,11 @@ import { Link, useNavigate } from "react-router-dom";
 import axios from 'axios';
 import { AuthContext } from "../helpers/AuthContext";
 //import "../web-payments-quickstart";
-
+import StripeContainer from '../components/StripeContainer';
 function PaymentScreen() {
+  
   const navigate = useNavigate();
+  const [showItem, setShowItem] = useState(false);
 
   const cartCheckoutInfo = JSON.parse(localStorage.getItem('cartCheckoutInfo'));
 
@@ -27,27 +29,10 @@ function PaymentScreen() {
   return (
     <div>
       <div>PAYMENT & CHECKOUT</div>
-
+         
       <div>
-        <h2>Payment Method:</h2>
-        <div>
-          <input
-            type="radio"
-            name="paymentMethod"
-            value="square"
-            checked={paymentMethod === 'square'}
-            onChange={onPaymentMethodSelect}
-          />
-          <label> Square </label>
-          {/* <input
-            type="radio"
-            name="paymentMethod"
-            value="paypal"
-            checked={paymentMethod === 'paypal'}
-            onChange={onPaymentMethodSelect}
-          />
-          <label> Paypal </label> */}
-        </div>
+        
+        
       </div>
 
       <div>
@@ -78,9 +63,18 @@ function PaymentScreen() {
           <hr />
         </div>
       </div>
+      <div><h2>Payment Method:</h2>
+    {showItem ? (
+            <StripeContainer />
+    ) : (
+            <>
+                    
+                    <button onClick={() => setShowItem(true)}>Pay by card</button>
+            </>
+    )}</div>
 
       <div>
-        {paymentMethod === "square" && <button onClick={onMakePayment}>Square Checkout Button</button>}
+        {paymentMethod === "square" && <button onClick={onMakePayment}>Proceed to finalize your order</button>}
         {/* { paymentMethod === "paypal" && <button onClick={onMakePayment}>Paypal Checkout Button</button> } */}
       </div>
     </div>

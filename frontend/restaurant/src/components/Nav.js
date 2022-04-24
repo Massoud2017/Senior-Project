@@ -4,8 +4,7 @@ import { CartContext } from '../helpers/CartContext';
 import { AuthContext } from "../helpers/AuthContext";
 import "./components-styles/style.css";
 import axios from "axios";
-//import "../helpers/script";
-
+import "../helpers/script";
 
 function Nav() {
   const navigate = useNavigate();
@@ -60,21 +59,43 @@ function Nav() {
           </li>
         </Link>
         <ul className="nav-links">
-        <Link to="/about">
-            <li>
-              <button className="about-btn">ABOUT</button>
-            </li>
-        </Link>  
-        <Link to="/menu">
-            <li>
-              <button className="menu-1">MENU</button>
-            </li>
-        </Link>
-        <Link to="/contact">
-            <li>
-              <button className="contact-btn">CONTACT</button>
-            </li>
-        </Link>
+          <Link to="/about">
+              <li>
+                <button className="about-btn">ABOUT</button>
+              </li>
+          </Link>  
+          <Link to="/menu">
+              <li>
+                <button className="menu-1">MENU</button>
+              </li>
+          </Link>
+          <Link to="/contact">
+              <li>
+                <button className="contact-btn">CONTACT</button>
+              </li>
+          </Link>
+        {/* </ul>  */}
+
+          {!authState ? (
+            <>
+            <Link to="/login">
+              <li>
+                <button className="login-btn">Sign In</button>
+              </li>
+            </Link>
+            
+            <Link to="/signup">
+              <li>
+                <button className="login-btn-signup">Register</button>
+              </li>
+            </Link>
+            </>
+          ) : (
+          <div className="Prof_logoutContainer">
+            <button className='prof-button' onClick={profile_button}> Profile</button>
+            <button className='logout-button' onClick={logout}> Sign Out</button>
+          </div>
+          )}
         </ul>
 
         {/* -- Click on Cart Icon bring user to Menu Page */}
@@ -91,30 +112,8 @@ function Nav() {
               )
             }
           </li>
-        </Link>
-        {!authState ? (
-          <>
-        <Link to="/login">
-          <li>
-            <button className="login-btn">Sign In</button>
-          </li>
-        </Link>
-        
-        <Link to="/signup">
-          <li>
-            <button className="login-btn-signup">Register</button>
-          </li>
-        </Link>
+        </Link> 
 
-        </>
-        
-        ) : (
-        <div className="Prof_logoutContainer">
-          <button className='prof-button' onClick={profile_button}> Profile</button>
-          <button className='logout-button' onClick={logout}> Sign Out</button>
-        </div>
-
-        )}
         <div className="hamburger">
           <span className="bar"></span>
           <span className="bar"></span>

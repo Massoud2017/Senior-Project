@@ -13,7 +13,6 @@ body{
     margin: 0;
 }
 
-
 nav{
     display: flex;
     justify-content: space-around;
@@ -27,7 +26,7 @@ nav{
     font-size: 5.5rem;
 }
 
-.nav-links {
+.nav-links{
     display: flex;
     justify-content: space-around;
     align-items: center;
@@ -35,10 +34,18 @@ nav{
     list-style: none;
     padding: 2rem 7rem 2rem;
 }
+
 @media screen and (max-width: 820px){
     nav{
         display: flex;
-        width:100%;
+        width:auto;
+        height: auto;
+    }
+}
+
+@media screen and (max-width: 390px){
+    nav{
+        display: flex;
         flex-wrap: wrap;
         height: auto;
     }

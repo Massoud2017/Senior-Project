@@ -39,14 +39,12 @@ function ConfirmPaymentScreen() {
 
   return (
     <div className='order-screen-container'>
-      <div>ORDER CONFIRMATION</div>
+      <h3>Order Confirmation</h3>
 
-      <div>
-        <h2>Your order has completed!!!</h2>
-      </div>
+      <h4>your order has been completed!!</h4>
 
-      <div>
-        <h2>Order Summary</h2>
+      <div className='order-summary'>
+        <h2>ORDER SUMMARY</h2>
         <div>
           {cartItems.map((dish) => (
             <div key={dish.id} className="row">
@@ -74,9 +72,8 @@ function ConfirmPaymentScreen() {
         </div>
       </div>
 
-      <div className="send-email">
-        <input type="email" placeholder="Enter your Email" />
-        <button>Sent Receipt to Email</button>
+      <div className="save-your-receipt">
+        Please print this page or take a screenshot to keep a copy of your receipt.
       </div>
     </div>
   )

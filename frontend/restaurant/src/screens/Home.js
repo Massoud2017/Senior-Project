@@ -52,10 +52,10 @@ class Home extends Component {
             <img src={food} />
         </div>
         <div className="intro-header">
-         <p>{textThatChanges}</p>
+         <h3>{textThatChanges}</h3>
           <p>Yelp Reviews</p>
             <h1>Pho Ru</h1>
-            <p>Vietnamese Southeast Asian Cuisine Restaurant</p>
+            <h3>Vietnamese Southeast Asian Cuisine Restaurant</h3>
             <p>Sacramento, CA</p>
         </div>
     </div>  

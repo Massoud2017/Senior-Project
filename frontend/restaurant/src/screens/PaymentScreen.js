@@ -27,16 +27,11 @@ function PaymentScreen() {
   }
 
   return (
-    <div>
-      <div>PAYMENT & CHECKOUT</div>
-         
-      <div>
-        
-        
-      </div>
-
-      <div>
-        <h2>Order Summary</h2>
+    <div className='make-payment-screen'> 
+      <h2>Verify and Pay</h2>    
+      <h3>Verify your order details and pay now!</h3>    
+      <div className='order-summary-payment-screen'>
+        <h2>ORDER SUMMARY</h2>
         <div>
           {cartItems.map((dish) => (
             <div key={dish.id} className="row">
@@ -63,7 +58,8 @@ function PaymentScreen() {
           <hr />
         </div>
       </div>
-      <div><h2>Payment Method:</h2>
+      <div className='payment-bottom-container'>
+      <div className='payment-method'><h2>PAYMENT METHOD</h2>
     {showItem ? (
             <StripeContainer />
     ) : (
@@ -74,9 +70,10 @@ function PaymentScreen() {
     )}</div>
 
       <div>
-        {paymentMethod === "square" && <button onClick={onMakePayment}>Proceed to finalize your order</button>}
+        {paymentMethod === "square" && <button className='finalize-order-btn'onClick={onMakePayment}>Finalize Your Order</button>}
         {/* { paymentMethod === "paypal" && <button onClick={onMakePayment}>Paypal Checkout Button</button> } */}
       </div>
+    </div>
     </div>
   )
 }

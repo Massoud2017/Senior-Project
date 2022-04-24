@@ -2,12 +2,7 @@ import { CardElement, useElements, useStripe } from "@stripe/react-stripe-js"
 import axios from "axios"
 import React, { useState } from 'react'
 
-const cartCheckoutInfo = JSON.parse(localStorage.getItem('cartCheckoutInfo'));
-console.log(cartCheckoutInfo)
-const { cartItems, itemsPrice, taxPrice, totalPrice } = cartCheckoutInfo;
-console.log("my total",totalPrice.toFixed(2))
-let payamount = totalPrice.toFixed(2)*100
-console.log(payamount)
+
 
 const CARD_OPTIONS = {
 	iconStyle: "solid",
@@ -33,7 +28,12 @@ export default function PaymentForm() {
     const [success, setSuccess ] = useState(false)
     const stripe = useStripe()
     const elements = useElements()
-
+    const cartCheckoutInfo = JSON.parse(localStorage.getItem('cartCheckoutInfo'));
+    console.log(cartCheckoutInfo)
+    const { cartItems, itemsPrice, taxPrice, totalPrice } = cartCheckoutInfo;
+    console.log("my total",totalPrice.toFixed(2))
+    let payamount = totalPrice.toFixed(2)*100
+    console.log(payamount)
 
     const handleSubmit = async (e) => {
         e.preventDefault()

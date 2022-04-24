@@ -339,11 +339,9 @@ h4{
     margin: 0;
     padding: 0;
     font-family: 'Montserrat', sans-serif;
-    /* background: linear-gradient(120deg,#2980b9,#8e44ad); */
     background: black;
-    /* height: 100vh; */
     width: 100%;
-    height: 100vh;
+    height: 100%;
 }
 
 .login-top-text-field h2 {
@@ -570,7 +568,7 @@ h4{
   justify-content: center;
 }
 
-.payasguest-btn {
+.payasguest-btn{
   width: 80%;
   height: 50px;
   border: 1px solid;
@@ -720,12 +718,96 @@ input[type=text] {
 	padding: 11px 15px 11px 0;
 }
 
+.make-payment-screen, .order-screen-container{
+    height: 100vh;
+    padding: 35px;
+    padding-left: 50px;
+    padding-right: 50px;
+    background-color: black;
+    color: white;
+    line-height: 30px;
+    font-family: 'Lexend', sans-serif;
+}
 
+.make-payment-screen h3{
+    color: white;
+    font-family: 'Lexend', sans-serif;
+    font-size: 1.4rem;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    font-weight: lighter;
+    cursor: default;
+}
+
+.make-payment-screen h2{
+    font-size: 1.7rem;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.payment-method h2, .order-summary-payment-screen h2{
+    color: black;
+    background-color: white;
+    padding-left: 10px;
+    font-size: 1.3rem;
+    border-radius: 10px;
+}
+
+.payment-method{
+    padding-bottom: 30px;
+}
+
+.finalize-order-btn {
+    font-size: 1rem;
+    font-family: 'Lexend', sans-serif;
+    padding: 0.2rem;
+    margin: 0.1rem;
+    border-radius: 0.5rem;
+    border: 0.1rem #404040 solid;
+    background-color: dodgerblue;
+    width: 25%;
+    cursor: pointer;
+    color: white;
+    margin-top: 1.5rem;
+}
+
+.payment-bottom-container{
+    padding-top: 20px;
+}
 
 /* ------------------------------- */
 /* -- For ConfirmPaymentScreen    */
 /* ----------------------------- */
 
+.order-summary{
+    padding-bottom: 15px;
+}
+
+.order-summary h2{
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.7rem;
+}
+
+.save-your-receipt{
+    background-color: dodgerblue;
+    border-radius: 25px;
+    padding: 5px;
+    padding-left: 10px;
+    text-align: center;
+}
+
+.order-screen-container h2{
+    color: black;
+    background-color: white;
+    padding-left: 10px;
+    font-size: 1.3rem;
+    border-radius: 10px;
+}
+
+.order-screen-container h3{
+    font-size: 1.7rem;
+    color: white;
+    font-family: 'Montserrat', sans-serif;
+}
 
 /* ------------------------------- */
 /* -- For Mobile and Tablet Devices    */

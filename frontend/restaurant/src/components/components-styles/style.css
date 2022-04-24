@@ -446,6 +446,8 @@ h4{
     font-size: 16px;
     font-weight: 600;
     color: #666666;
+    display: flex;
+    align-items: center;
 }
 
 .signup-link a ,.Prof_logoutContainer{
@@ -470,6 +472,8 @@ h4{
     justify-content: center;
     white-space: nowrap;
     border: none;
+    text-decoration: underline;
+    text-decoration-color: rgb(80, 23, 134);
 }
 
 .login-btn:hover{
@@ -883,6 +887,21 @@ input[type=text] {
         gap: 0;
         margin: 0.5px;
         transform: translateY(20px);
+    }
+    .Prof_logoutContainer{
+        display:inline-block;
+        font-size: 1.45rem;
+        font-weight: bold;
+        color: rgb(31, 61, 3);
+        background-color: #FEB139;
+        width: 100%;
+        padding: 0%;  
+        gap: 0;
+        height: fit-content;
+        justify-items: center;
+        margin-right: 5%;
+        text-decoration: underline;
+        text-decoration-color: rgb(80, 23, 134);
     }
     .nav-links.active{
         Left: 0%;

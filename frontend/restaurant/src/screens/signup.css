@@ -153,3 +153,9 @@
 .login-btn-password:hover{
   background-color: rgb(91, 168, 245);
 }
+@media screen and (max-width: 850px){
+  .input-field {
+    font-size:medium;
+    width: 100%;
+  }
+}

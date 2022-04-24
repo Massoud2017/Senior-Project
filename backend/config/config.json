@@ -1,7 +1,7 @@
 {
   "development": {
     "username": "root",
-    "password": "Energy-Team2021",
+    "password": "seniorPROject.2021",
     "database": "dbrestaurant",
     "host": "localhost",
     "dialect": "mysql"

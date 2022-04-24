@@ -4,14 +4,17 @@ import axios from 'axios';
 import { AuthContext } from "../helpers/AuthContext";
 //import "../web-payments-quickstart";
 import StripeContainer from '../components/StripeContainer';
+
 function PaymentScreen() {
-  
+
   const navigate = useNavigate();
-  const [showItem, setShowItem] = useState(false);
+  const [showItem, setShowItem] = useState(true);
 
   const cartCheckoutInfo = JSON.parse(localStorage.getItem('cartCheckoutInfo'));
 
   const { cartItems, itemsPrice, taxPrice, totalPrice } = cartCheckoutInfo;
+
+  console.log('Cart Items:', cartItems);
 
   const [paymentMethod, setPaymentMethod] = useState('square');
 
@@ -19,17 +22,36 @@ function PaymentScreen() {
     setPaymentMethod(event.target.value);
   }
 
-  const onMakePayment = () => {
-    //-- Store cartCheckoutInfo to sessionStorage so that when user accidentally refresh
-    //-- the confirmation page they won't loose the confirmation info
-    sessionStorage.setItem('cartCheckoutInfo', JSON.stringify(cartCheckoutInfo));
-    navigate('/confirmpayment');
-  }
+  //-- Prepare email message
+  let orderList = '<p>';
+  cartItems.map((dish) => (
+    orderList = `${orderList} ${dish.name} &ensp; x ${dish.qty} &ensp; $${dish.price.toFixed(2)} <br />`
+  ));
+  orderList = `${orderList} <br /> <hr> <br />`;
+  orderList = `${orderList} Tax Price &ensp; &ensp; &ensp; &ensp; $${taxPrice.toFixed(2)} <br />`;
+  orderList = `${orderList} <strong>Total Price</strong> &ensp; &ensp; &ensp; &ensp; <strong>$${totalPrice.toFixed(2)}</strong></p>`;
+  console.log(orderList);
+
+  //-- Store cartCheckoutInfo to sessionStorage so that when user accidentally refresh
+  //-- the confirmation page they won't loose the confirmation info
+  sessionStorage.setItem('cartCheckoutInfo', JSON.stringify(cartCheckoutInfo));
+
+  //-- Store email message to sessionStorage and send it to seller when we get to
+  //-- the confirmation page
+  sessionStorage.setItem('orderList', orderList);
+
+  // const onMakePayment = () => {
+  //   //-- Store cartCheckoutInfo to sessionStorage so that when user accidentally refresh
+  //   //-- the confirmation page they won't loose the confirmation info
+  //   sessionStorage.setItem('cartCheckoutInfo', JSON.stringify(cartCheckoutInfo));
+
+  //   navigate('/confirmpayment');
+  // }
 
   return (
-    <div className='make-payment-screen'> 
-      <h2>Verify and Pay</h2>    
-      <h3>Verify your order details and pay now!</h3>    
+    <div className='make-payment-screen'>
+      <h2>Verify and Pay</h2>
+      <h3>Verify your order details and pay now!</h3>
       <div className='order-summary-payment-screen'>
         <h2>ORDER SUMMARY</h2>
         <div>
@@ -59,21 +81,20 @@ function PaymentScreen() {
         </div>
       </div>
       <div className='payment-bottom-container'>
-      <div className='payment-method'><h2>PAYMENT METHOD</h2>
-    {showItem ? (
+        <div className='payment-method'><h2>PAYMENT METHOD</h2>
+          {showItem ? (
             <StripeContainer />
-    ) : (
+          ) : (
             <>
-                    
-                    <button onClick={() => setShowItem(true)}>Pay by card</button>
+              {/* <button onClick={() => setShowItem(true)}>Pay by card</button> */}
             </>
-    )}</div>
-
-      <div>
-        {paymentMethod === "square" && <button className='finalize-order-btn'onClick={onMakePayment}>Finalize Your Order</button>}
-        {/* { paymentMethod === "paypal" && <button onClick={onMakePayment}>Paypal Checkout Button</button> } */}
+          )}
+        </div>
+        {/* <div>
+          {paymentMethod === "square" && <button className='finalize-order-btn' onClick={onMakePayment}>Finalize Your Order</button>}
+          { paymentMethod === "paypal" && <button onClick={onMakePayment}>Paypal Checkout Button</button> }
+        </div> */}
       </div>
-    </div>
     </div>
   )
 }

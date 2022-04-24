@@ -3,6 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@emailjs/browser": "^3.6.2",
     "@googlemaps/react-wrapper": "^1.1.15",
     "@react-google-maps/api": "^2.7.0",
     "@stripe/react-stripe-js": "^1.7.2",

@@ -2,6 +2,7 @@ import React, { useState, useEffect, useContext } from 'react';
 import { Link, useNavigate } from "react-router-dom";
 import axios from 'axios';
 import { CartContext } from '../helpers/CartContext';
+import emailjs from '@emailjs/browser';  //-- Package Required: npm install @emailjs/browser --save
 
 function ConfirmPaymentScreen() {
   //-- Clear cart badge and basket
@@ -14,12 +15,32 @@ function ConfirmPaymentScreen() {
   const totalPrice = cartCheckoutInfo.totalPrice;
 
   useEffect(() => {
+
+    //-- Send email to seller
+    //--   . serviceID: the email service (e.g. GMail)
+    //--   . templateID: email template
+    //--   . form: form element or selector
+    //--   . publicKey: EmailJS user API public key
+    const orderList = sessionStorage.getItem('orderList');
+    const templateParams = {
+      message: orderList
+    };
+
+    console.log('orderList: ', orderList);
+    emailjs.send('service_fzfstsj', 'template_olv33yj', templateParams, 'lusqUecZ-hspsrmVd')
+      .then(function (response) {
+        console.log('SUCCESS!', response.status, response.text);
+      }, function (error) {
+        console.log('FAILED...', error);
+      });
+
+    //-- Store order info to database
     try {
       axios.post(
-        'http://localhost:3001/orders', 
+        'http://localhost:3001/orders',
         { order_info: JSON.stringify(cartCheckoutInfo), price_total: totalPrice.toString(), paid: 'true' },
         {
-          headers:{
+          headers: {
             accessToken: localStorage.getItem("accessToken")
           }
         }
@@ -72,7 +93,12 @@ function ConfirmPaymentScreen() {
         </div>
       </div>
 
-      <div className="save-your-receipt">
+      {/* <div className="send-email">
+        <input type="email" placeholder="Enter your Email" />
+        <button>Sent Receipt to Email</button>
+      </div> */}
+
+      <div className='save-your-receipt'>
         Please print this page or take a screenshot to keep a copy of your receipt.
       </div>
     </div>

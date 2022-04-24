@@ -54,10 +54,10 @@ function Login(props) {
                     }}
                   />
                 </div>
-                  <button className='form-login-btn' onClick={login}>Login</button>
-                <div className='g-signin google-login-btn'>
+                <button className='form-login-btn' onClick={login}>Login</button>
+                {/* <div className='g-signin google-login-btn'>
                   <GoogleLoginButton/>
-                </div>
+                </div> */}
                 <div className='signup-link'>
                   Not a member yet? <Link to='/signup'>Create an account</Link><br/>
                   Forgot your password? <Link to='/forgotpassword'>Reset password</Link>

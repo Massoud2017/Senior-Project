@@ -66,8 +66,13 @@ body {
 
 @media (max-width: 650px) {
   html { font-size: 12px; }
-  .intro-header { padding: 1.5rem 2rem; }
+  .intro-header { padding: 1.5rem 2rem;}
   .intro-header h3 { font-size: 1.4rem;}
   .intro h1 { font-size: 2.5rem; }
   .intro p { font-size: 1.25rem;}
+  .intro .intro-header{height: 91vh;}
+}
+
+@media (max-width: 850px) {
+  .intro .intro-header{height: 91vh;}
 }

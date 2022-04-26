@@ -439,13 +439,26 @@ h4{
     transition: .3s;
 }
 
-.signup-link, .Prof_logoutContainer {
+.Prof_logoutContainer{
     margin: 0;
     padding: 5px 0 20px 0;
     text-align: center;
     font-size: 16px;
     font-weight: 600;
     color: #666666;
+    display: flex;
+    align-items: center;
+}
+
+.signup-link{
+    margin: 0;
+    padding: 5px 0 20px 0;
+    text-align: center;
+    font-size: 16px;
+    font-weight: 600;
+    color: #666666;
+    display: column;
+    align-items: center;
 }
 
 .signup-link a ,.Prof_logoutContainer{
@@ -470,6 +483,8 @@ h4{
     justify-content: center;
     white-space: nowrap;
     border: none;
+    text-decoration: underline;
+    text-decoration-color: rgb(80, 23, 134);
 }
 
 .login-btn:hover{
@@ -669,6 +684,7 @@ td{
     color: white;
     background-color: black;
     padding: 1.25rem;
+    height: 100vh;
 }
 
 .main-content h3{
@@ -810,7 +826,9 @@ input[type=text] {
     color: white;
     font-family: 'Montserrat', sans-serif;
 }
-
+.forgotPassword{
+    height: 100vh;
+}
 /* ------------------------------- */
 /* -- For Mobile and Tablet Devices    */
 /* ----------------------------- */
@@ -901,6 +919,22 @@ input[type=text] {
         gap: 0;
         margin: 0.5px;
         transform: translateY(20px);
+        cursor: pointer;
+    }
+    .Prof_logoutContainer{
+        display:inline-block;
+        font-size: 1.45rem;
+        font-weight: bold;
+        color: rgb(31, 61, 3);
+        background-color: #FEB139;
+        width: 100%;
+        padding: 0%;  
+        gap: 0;
+        height: fit-content;
+        justify-items: center;
+        margin-right: 5%;
+        text-decoration: underline;
+        text-decoration-color: rgb(80, 23, 134);
     }
     .nav-links.active{
         Left: 0%;
@@ -915,10 +949,16 @@ input[type=text] {
         margin-right: 0.5rem;
         height: min-content;
       }
-
-
-
-    
+      .login-container{
+        position: relative;
+        float: center;
+        justify-content: center;
+        left: 0%;
+        width: 100%;
+        background: white;
+        border-radius: 30px;
+        margin: 3% 0;
+    }
 
 }
 

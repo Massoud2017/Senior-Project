@@ -2,8 +2,8 @@ import React, { useState } from 'react';
 import { GoogleLogin, GoogleLogout } from 'react-google-login';
 import "./components/style.css";
 
-// Might be problematic, please Nam know if this does not work
-const clientId = "107823377619-v6763mjmkri8u1g2f9gtb18p56tlkuot.apps.googleusercontent.com";
+// Edit for future use
+const clientId = "ADD_NEW_ONE";
 
 function GLogin() {
     const [showloginButton, setShowloginButton] = useState(true);

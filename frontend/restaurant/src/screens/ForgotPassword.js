@@ -22,8 +22,6 @@ function ForgotPassword() {
         last_name: Yup.string().min(3).max(15).required(),
     });
 
-    const { setAuthState } = useContext(AuthContext);
-
     const handleSubmit = (data) => {
 		axios.post("http://localhost:3001/resetpassword/verifyuser", data).then((response) => {
 		if (response.data.error) {
@@ -31,7 +29,6 @@ function ForgotPassword() {
 		} else {
 			sessionStorage.setItem('resetToken', response.data);
             navigate('/resetpassword');
-            setAuthState(true);
         }});
 	};
 

@@ -72,3 +72,7 @@ body {
   .intro p { font-size: 1.25rem;}
   .intro .intro-header{height: 91vh;}
 }
+
+@media (max-width: 850px) {
+  .intro .intro-header{height: 91vh;}
+}

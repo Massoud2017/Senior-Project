@@ -812,7 +812,9 @@ input[type=text] {
     color: white;
     font-family: 'Montserrat', sans-serif;
 }
-
+.forgotPassword{
+    height: 100vh;
+}
 /* ------------------------------- */
 /* -- For Mobile and Tablet Devices    */
 /* ----------------------------- */

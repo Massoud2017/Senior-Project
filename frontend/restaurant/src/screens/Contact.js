@@ -20,7 +20,7 @@ function Contact() {
         </ul>
         <h5>GET IN TOUCH</h5>
         <ul>
-          <li>Have questions? We're happy to answer them! Give us a call at 916-476-3754 or email us at phorurestaurant@email.com </li>
+          <li>Have questions? We're happy to answer them! Give us a call at 916-476-3754 or email us at phorurestaurant@gmail.com </li>
           <li>
             <div className="socialMedia">
               <h4>Find us on Instagram and Facebook</h4>
@@ -30,9 +30,9 @@ function Contact() {
           </li>
         </ul>
       </div>
-      <div className="mapouter">
+      <div className="map-router">
         <div className="gmap_canvas">
-          <iframe class= "responsive-iframe" title="google map" id="gmap_canvas" src="https://maps.google.com/maps?q=6115%20Mack%20Rd.%20Sacramento,%20CA%2095823&t=&z=13&ie=UTF8&iwloc=&output=embed" frameBorder="0" scrolling="no" marginHeight="0" marginWidth="0"></iframe>
+          <iframe class= "google-map-size" title="google map" id="gmap_canvas" src="https://maps.google.com/maps?q=6115%20Mack%20Rd.%20Sacramento,%20CA%2095823&t=&z=13&ie=UTF8&iwloc=&output=embed" frameBorder="0" scrolling="no" marginHeight="0" marginWidth="0"></iframe>
           <a href="https://wimip.net/nordvpn-coupon"></a><br />
           <style dangerouslySetInnerHTML={{ __html: ".mapouter{position:relative;margin-top:26px;}" }} />
           <a href="https://www.embedgooglemap.net"></a>

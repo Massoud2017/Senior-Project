@@ -340,7 +340,7 @@ h4{
     font-family: 'Montserrat', sans-serif;
     background: black;
     width: 100%;
-    height: 100%;
+    height: 80vh;
 }
 
 .login-top-text-field h2 {
@@ -691,7 +691,6 @@ input[type=text] {
 /* ---------------------- */
 .FormGroup {
 	margin: 0 15px 20px;
-	padding: 0;
 	border-style: none;
 	background-color: #7795f8;
 	will-change: opacity, transform;
@@ -706,6 +705,10 @@ input[type=text] {
 	align-items: center;
 	margin-left: 15px;
 	border-top: 1px solid #819efc;
+}
+
+.payment-form-container{
+    padding-top: 20px;
 }
 
 .StripeElement--webkit-autofill {
@@ -806,6 +809,21 @@ input[type=text] {
     font-size: 1.7rem;
     color: white;
     font-family: 'Montserrat', sans-serif;
+}
+
+/* ------------------------------- */
+/* -- For Mobile and Tablet Devices    */
+/* ----------------------------- */
+
+.google-map-size{
+    height: 100%;
+    width: 72%;
+}
+
+.map-router{
+    align-items: center;
+    padding-top: 20px;
+    width: 35%;
 }
 
 /* ------------------------------- */

@@ -86,7 +86,7 @@ export default function PaymentForm() {
 
   return (
     <div>
-      <div>
+      <div className='payment-form-container'>
         {!success &&
           <form onSubmit={handleSubmit}>
             <fieldset className="FormGroup">

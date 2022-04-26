@@ -1,5 +1,4 @@
 import React from "react";
-import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { Formik, Form, Field, ErrorMessage } from "formik";
 import * as Yup from "yup";
@@ -10,16 +9,18 @@ function ResetPassword() {
     let navigate = useNavigate();
 
     const initialValues = {
+        security_question_1: "",
+        security_question_2: "",
         password: "",
         passwordConfirmation: "",
     };
 
     const validationSchema = Yup.object().shape({
+        security_question_1: Yup.string().min(1).required(),
+        security_question_2: Yup.string().min(1).required(),
         password: Yup.string().min(4).max(20).required(),
         passwordConfirmation: Yup.string().oneOf([Yup.ref('password'), null], 'Passwords must match')
     });
-    
-    const newPassword = useState("");
 
     const resetPassword = (data) => {
         axios.put(
@@ -33,6 +34,7 @@ function ResetPassword() {
         ).then((response) => {
             if (response.data.error) {
                 alert(response.data.error);
+                navigate('/login');
             } else {
                 alert("Your password has been changed.");
                 navigate('/');

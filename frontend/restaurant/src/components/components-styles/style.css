@@ -918,10 +918,16 @@ input[type=text] {
         margin-right: 0.5rem;
         height: min-content;
       }
-
-
-
-    
+      .login-container{
+        position: relative;
+        float: center;
+        justify-content: center;
+        left: 0%;
+        width: 100%;
+        background: white;
+        border-radius: 30px;
+        margin: 3% 0;
+    }
 
 }
 

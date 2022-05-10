@@ -2,18 +2,19 @@
 
 **Team Energy:** Massoud Bakhtyari, Zoha Alvi, Misba Tabassum, Naba Riaz, Nam Tran, Duc Nguyen  
 
-### Instructor:
+### Instructors:
 
   - Fall 2021: prof. Chris Grove  
   - Spring 2022: prof. Kenneth Elliot
 
-### Lab Advisor:
+### Lab Advisors:
 
   - Fall 2021: prof. Yongwan Lim  
   - Spring 2022: prof. Swayam Pati
 
 ### Description: 
-    Our project is to build a new website for Pho Ru restaurant. This website will have a modern and aesthetic look, user friendly and allow more interaction from the customers.
+
+Our project is to build a new website for Pho Ru restaurant. This website will have a modern and aesthetic look, user friendly and allow more interaction from the customers.
 
 ![alt text][phoru-logo]
 
@@ -59,15 +60,15 @@ Use ```npm install``` command to install these packages
 
 | Package | Version | Purpose |
 |---------|---------|---------|
-|emailjs/browser|3.6.2|to implement emailjs|
-|stripe|8.219.0|to implment Stripe payment system|
-|stripe/react-stripe-js|1.7.2|to implment Stripe payment system|
-|stripe/stripe-js|1.29.0|to implment Stripe payment system|
-|axios|0.24.0|to make API requests|
-|formik|2.2.9|to build and control form|
-|yup|0.32.11|to parse value and perform user input validation to the form|
-|react-router|6.0.2|to create route for React app|
-|react-router-dom|6.0.2|to create different routes and urls for our app|
+|`emailjs/browser`|3.6.2|to implement emailjs|
+|`stripe`|8.219.0|to implment Stripe payment system|
+|`stripe/react-stripe-js`|1.7.2|to implment Stripe payment system|
+|`stripe/stripe-js`|1.29.0|to implment Stripe payment system|
+|`axios`|0.24.0|to make API requests|
+|`formik`|2.2.9|to build and control form|
+|`yup`|0.32.11|to parse value and perform user input validation to the form|
+|`react-router`|6.0.2|to create route for React app|
+|`react-router-dom`|6.0.2|to create different routes and urls for our app|
 ||||
 
 ### Setting up whitelist for the localhost

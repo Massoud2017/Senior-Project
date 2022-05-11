@@ -55,7 +55,7 @@ function ResetPassword() {
                     <div className="formBody">
                     
                     <p>Please answer the following security questions.</p>
-                    <h1>Question 1</h1>
+                    <h1>What was your first car?</h1>
                     <ErrorMessage name="security_answer_1" component="span" style={{ color: 'red'}} />
                     <Field
                         autoComplete="off"
@@ -64,7 +64,7 @@ function ResetPassword() {
                         placeholder="Answer 1"
                         className="input-field-pswd"
                     />
-                    <h1>Question 2</h1>
+                    <h1>What is the name of the town where you were born?</h1>
                     <ErrorMessage name="security_answer_2" component="span" style={{ color: 'red'}} />
                     <Field
                         autoComplete="off"

@@ -1019,4 +1019,22 @@ input[type=text] {
         margin: 3% 0;
     }
 
+    .pay-button {
+        width: 26%;
+        height: 40px;
+        border: 2px solid;
+        background: #2691d9;
+        border-radius: 95px;
+        font-size: 1.5rem;
+        color: #e9f4fb;
+        font-weight: 600;
+        cursor: pointer;
+        outline: none;
+    }
+
+    .pay-button:hover {
+        cursor: pointer;
+        color: #2691d9;
+        background-color: #e9f4fb;
+    }
 }

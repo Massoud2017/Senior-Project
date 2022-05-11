@@ -94,12 +94,12 @@ export default function PaymentForm() {
                 <CardElement options={CARD_OPTIONS} />
               </div>
             </fieldset>
-            <button>Pay</button>
+            <button class="pay-button">Pay</button>
           </form>}
       </div>
       <div>
         {paymentInProgress && <h3>Payment In Progress.....</h3>}
       </div>
-    </div>
+    </div >
   )
 }

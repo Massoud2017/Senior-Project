@@ -129,9 +129,9 @@ To add google map to the contact page, we use embeded google map
 
 Checkout our documentation here:
 
-- [User Manual] (documentation/User-Manual_TeamEnergy.pdf)
-- [Maintenance Manual] (documentation/Maintenance-Manual_TeamEnergy.pdf)
-- [System Test Report] (documentation/System-Test-Report_TeamEnergy.pdf)
+- [User Manual](documentation/User-Manual_TeamEnergy.pdf)
+- [Maintenance Manual](documentation/Maintenance-Manual_TeamEnergy.pdf)
+- [System Test Report](documentation/System-Test-Report_TeamEnergy.pdf)
 
 
 [phoru-logo]: /img/phoru-logo.png "Pho Ru Logo img"

@@ -12,7 +12,7 @@ class PageNavigateTest(unittest.TestCase):
   def test_page_navigation(self):
     #-- Provide path to ChromeDriver
     PATH = '/Users/ducnguyen/Programs/chromedriver'
-    WEBPAGE = 'https://626883441640c715162ae8f9--thriving-creponne-382db8.netlify.app'
+    WEBPAGE = 'https://627b5ea53f081c390b1a93f2--thriving-creponne-382db8.netlify.app'
     WAITTIME = 5  #-- seconds
     SHOWTIME = 2  #-- in seconds
 

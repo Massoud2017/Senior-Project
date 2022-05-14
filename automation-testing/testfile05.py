@@ -11,7 +11,7 @@ from selenium.webdriver.support import expected_conditions as EC
 class MakeOrderTest(unittest.TestCase):
   def test_make_order(self):
     PATH = '/Users/ducnguyen/Programs/chromedriver'
-    WEBPAGE = 'https://626883441640c715162ae8f9--thriving-creponne-382db8.netlify.app'
+    WEBPAGE = 'https://627b5ea53f081c390b1a93f2--thriving-creponne-382db8.netlify.app'
     WAITTIME = 10  #-- in seconds
     SHOWTIME = 2   #-- in seconds
 
